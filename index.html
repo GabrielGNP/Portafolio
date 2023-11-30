@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let date = new Date;
+            let dayborn = new Date(1999, 2, 16);
+            let dateGradt = new Date(2022,7,7);
+
+            let yearsOld = parseInt((Math.abs(date-dayborn))/(1000 * 3600 * 24*365));//date.getTime() - dayborn.getTime();
+
+            let yearsGrad = date.getFullYear() - dateGradt.getFullYear();
+            let monthsGrad = date.getMonth() - dateGradt.getMonth();
+            let daysGrad = date.getDate() - dateGradt.getDate();
+        
+            document.getElementById("yearsOld").innerHTML = yearsOld;
+            document.getElementById("timeGrad").innerHTML = yearsGrad + ' años, '+ monthsGrad + " meses y "+ daysGrad + " días";
+        })
+        
+        
+        
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#Exp">Experiencias</a>
+            <a href="#Std">Estudios</a>
+            <a href="#Pro">Proyectos</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <h1>Gabriel Perero</h1>
+                <h2><strong>Analista de Sistemas, Desarrollador de software y Freelance</strong></h2>
+                <span><a>linkedIn</a><a>github</a><p>gabrielpererojob@gmail.com</p></span>
+            </article>
+            <article>
+                <p>Hola, tengo <span id="yearsOld">24</span> años y soy un graduado en la carrera de Analisis de Sistemas. Me dedico al desarrollo del software desde que terminé la universidad, hace aproximadamente <span id="timeGrad">más de un año</span>. El desarrollo de software es algo que me gusta mucho, sobre todo la programación, así que es habitual que esté escribiendo código.</p>
+                <p>Desde que terminé la universidad me he dedicado a aprender diferentes tecnologías, algunas por curiosidad y otras por necesidad al tener que realizar un trabajo. He aprendido sobre desarrollo mobil, aplicaciones web (front y back), APIs, desarrollo de aplicaciones de escritorio y un poco sobre desarrollo de juegos</p>    
+            </article>
+        </section>
+        <section>
+            <h2 id="Exp">Experiencias</h2>
+            <section>
+                <h4>Trabajos activos</h4>
+                    <article>
+                        <h5>Profesor de programación en academia Coding School</h5>
+                        <img src="img/Coding School.webp" alt="">
+                        <p>Profesor de niveles iniciales en la academia.</p>
+                        <p>Enseñanza de conceptos básicos de la programación y la lógica de la programación utilizando la creación de juegos como medio de aprendizaje.</p>
+                        <p>Herramientas utilizadas: Scratch como motor para la creación de juegos y la enseñanza.</p>
+                        <span>
+                            <img src="img/logo_sm.png" alt="Scratch" width="70px">
+                        </span>
+                    </article>
+
+                    <article>
+                        <h5>Voluntariado de Mantenimiento y actualización de una Wiki</h5>
+                        <p>Encargado de:</p>
+                        <ul>
+                            <li>Agregar nuevo contenido.</li>
+                            <li>Actualizar la información.</li>
+                            <li>Mejorar la visivilidad y la organización de la información.</li>
+                            <li>Idear nuevos usos o nuevas utilidades para la wiki.</li>
+                        </ul>
+                        <p>Herramientas y tecnologías:</p>
+                        <span>
+                            <img src="" alt="HTML" title="HTML">
+                            <img src="" alt="CSS" title="CSS">
+                            <img src="" alt="JavaScript" title="JavaScript">
+                            <img src="" alt="JQuery" title="JQuery">
+                        </span>
+                    </article>
+
+                    <article>
+                        <h5>Desarrollador de software freelance</h5>
+                        <p>Desarrollo de aplicaciones de software a demanda.</p>
+                        <p>Las tecnologías a utilizar dependen del tipo de software a desarrollar.</p>
+                        <p>Aplicaciones desarrolladas:</p>
+                        <ul>
+                            <li>Gestor de Productos - Aplicación de escritorio para sistemas operativos Windows (<a href="#Pro">Más información en la sección de proyectos</a>)</li>
+                        </ul>
+                    </article>
+            </section>
+            <section>
+                <h4>Trabajos finalizados</h4>
+                <article>
+                    <h5>Profesor en Taller de Informática </h5>
+                    <p>Profesor de informática de un taller para adultos mayores y jubilados.</p>
+                    <p>Enseñanza sobre el uso de una PC, uso de herramientas como Gmail, Drive, Google Maps, consejos de seguridad al navegar, utilizar internet como herramienta de ayuda.</p>
+                    <p>Realización de guías y manuales sobre el uso de distintas herramientas.</p>
+                </article>
+                <article>
+                    <h5>Programador en dispositivos móviles con el SDK Flutter</h5>
+                    <p>Trabajo de contratación por proyecto</p>
+                    <p>Desarrollo de una aplicación para dispositivos móviles utilizando Flutter</p>
+                    <p>Herramientas utilizadas:</p>
+                    <ul>
+                        <li>Flutter (con el lenguaje Dart)</li>
+                        <li>Android studio</li>
+                    </ul>
+                </article>
+            </section>
+            
+            
+        </section>
+        <section>
+            <h3 id="Std">Estudios</h3>
+            <article></article>
+        </section>
+        <section>
+            <h3 id="Pro">Proyectos</h3>
+        </section>
+    </main>
+</body>
+</html>
