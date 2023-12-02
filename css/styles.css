@@ -94,7 +94,6 @@ h3{
     margin: 0px;
 }
 textGrad{
-    display: block;
     color: var(--b600);
     background: linear-gradient(270deg, var(--b300), var(--b600));
     -webkit-text-fill-color: transparent;
