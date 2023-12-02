@@ -123,17 +123,24 @@ textGrad{
     text-wrap: pretty;
 }
 .activeJob{
-    margin: 110px;
+    margin-left: 110px;
+    margin-right: 110px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    /*margin: 110px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
     /*padding: 10px;*/
     padding-top: 0px;
     padding-left: 40px;
-    background: var(--b950);
-    border: 1px solid var(--b600);
+    /*background: var(--b950);
+    border: 1px solid var(--b600);*/
     border-radius: 15px;
     position: relative;
-    min-height: 90px;
+    min-height: 40px;
+}
+.activeJob:hover{
+    background: var(--950);
 }
 .activeJob h4{
     text-decoration: underline var(--b600);
@@ -142,26 +149,103 @@ textGrad{
     margin-left: 0px;
     font-size: 20px;
 }
+.activeJob details{
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.activeJob .title{
+    text-decoration: underline var(--b600);
+    font-size: 20px;
+}
+.activeJob .title::marker{
+    color: var(--b600);
+    
+}
 .activeJob .iconJob{
     position: absolute;
-    top: 10px;
-    left: -35px;
+    top: 0px;
+    left: -15px;
     border-radius: 70px;
     border: 1px solid var(--b600);
 }
 .activeJob a{
     color: var(--b600);
 }
-.inactiveJob{
-    margin: 110px;
+
+.inactiveJob{    
+    margin-left: 110px;
+    margin-right: 110px;
     margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 15px;
+    /*margin: 110px;
+    margin-top: 10px;
+    margin-bottom: 10px;*/
+    /*padding: 10px;*/
     padding-top: 0px;
-    background: var(--950);
-    border: 1px solid var(--600);
+    padding-left: 40px;
+    /*background: var(--950);
+    border: 1px solid var(--600);*/
     border-radius: 15px;
+    position: relative;
+    min-height: 40px;
+}
+.inactiveJob:hover{
+    background: var(--950);
 }
 .inactiveJob h4{
     text-decoration: underline var(--600);
+}
+.inactiveJob details{
+    position: relative;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+.inactiveJob .title{
+    text-decoration: underline var(--600);
+    font-size: 20px;
+}
+.inactiveJob .title::marker{
+    color: var(--600);
+}
+
+.tableTimeline{
+    display: flex;
+}
+.timeline{
+    border-left: 3px solid grey;
+    margin-left: 100px;
+    flex:1;
+}
+.time{
+    position: absolute;
+    left: -120px;
+    width: 110px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.stage{
+    position: relative;
+}
+.item{
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+    border-radius: 10px;
+    position: absolute;
+    left: -6px;
+    top: 4px;
+}
+.data{
+    margin:20px;
+    margin-left: 10px;
+    border-left: 2px solid var(--600);
+    border-right: 2px solid var(--600);
+    border-radius: 10px;
+    padding: 5px;
+    width: fit-content;
+}
+.data p{
+    margin: 0px;
 }
