@@ -69,8 +69,8 @@ nav a:hover{
     border-radius: 20px;
 }
 main{
-    margin-right: 5vw;
-    margin-left: 5vw;
+    margin-right: 15vw;
+    margin-left: 15vw;
 }
 h1{
     font-size: 35px; 
@@ -94,7 +94,6 @@ h3{
     margin: 0px;
 }
 textGrad{
-    display: block;
     color: var(--b600);
     background: linear-gradient(270deg, var(--b300), var(--b600));
     -webkit-text-fill-color: transparent;
@@ -104,10 +103,7 @@ textGrad{
 }
 
 .topTitle{
-    background: var(--950);
-    padding: 20px;
-    border: 1px solid var(--600);
-    border-radius: 10px;
+    
 }
 .topTitle textgrad{
     display: block;
@@ -130,13 +126,14 @@ textGrad{
     margin: 110px;
     margin-top: 10px;
     margin-bottom: 10px;
-    padding: 10px;
+    /*padding: 10px;*/
     padding-top: 0px;
     padding-left: 40px;
     background: var(--b950);
     border: 1px solid var(--b600);
     border-radius: 15px;
     position: relative;
+    min-height: 90px;
 }
 .activeJob h4{
     text-decoration: underline var(--b600);
