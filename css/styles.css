@@ -133,11 +133,13 @@ textGrad{
     /*padding: 10px;*/
     padding-top: 0px;
     padding-left: 40px;
+    padding-right: 40px;
     /*background: var(--b950);
     border: 1px solid var(--b600);*/
     border-radius: 15px;
     position: relative;
     min-height: 40px;
+    border: 1px solid #474748;
 }
 .activeJob:hover{
     background: var(--950);
@@ -185,11 +187,13 @@ textGrad{
     /*padding: 10px;*/
     padding-top: 0px;
     padding-left: 40px;
+    padding-right: 40px;
     /*background: var(--950);
     border: 1px solid var(--600);*/
     border-radius: 15px;
     position: relative;
     min-height: 40px;
+    border: 1px solid #474748;
 }
 .inactiveJob:hover{
     background: var(--950);
