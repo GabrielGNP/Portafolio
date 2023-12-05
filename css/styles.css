@@ -1,13 +1,18 @@
 :root{
-    --timeAnimation: 0.5s;
-    --timeAnimationBookSelected: 1.5s;
     --950:#262626;
     --600:#5d5d5d;
-    --b950: #112e5a;
+    /*--b950: #112e5a;
     --b950T:rgba(17, 46, 90, 0.585);
     --b600:#1385ff;
     --b300:#88d8ff;
-    --b300T: #88d7ff84;
+    --b300T: #88d7ff84;*/
+
+    --b950: #451a03;
+    --b900: #78340f;
+    --b900T:#78340f8a;
+    --b600:#d87607;
+    --b300: #fbd24e;
+    --b300T: #fbd24e84;
 }
 
 *{
@@ -30,17 +35,17 @@ body{
     
 }
 header{
-    background: #2626264e;
+    background: var(--b900T);
     backdrop-filter: blur(5px);
     width: 100%;
     position: sticky;
     top: 0px;
     z-index: 1;
 }
-nav{
+header nav{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: end;
     flex-flow: nowrap;
 }
 nav a{
@@ -69,23 +74,31 @@ nav a:hover{
     border-radius: 20px;
 }
 main{
-    margin-right: 15vw;
-    margin-left: 15vw;
+    margin-right: 10vw;
+    margin-left: 10vw;
 }
 h1{
     font-size: 35px; 
 }
-h2{
-    color: #1385ff;
+.divh2{
+    color: var(--b300);
     background: var(--950);
     padding: 10px;
-    border: 1px solid var(--600);
+    border-left: 5px solid var(--b300);
     border-radius: 10px;      
-    margin-bottom: 5px;
+    margin: 0px;
+    margin-right: 10px;
+    min-width: 170px;
 }
+.divh2 h2{
+    position: sticky;
+    top: 75px;
+}
+
 h3{
     color: var(--b600);
     background: var(--950);
+    border-left: 2px solid var(--b600);
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -122,9 +135,21 @@ textGrad{
     width: 48%;
     text-wrap: pretty;
 }
+.section{
+    display: flex;
+    min-height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    box-sizing: content-box; 
+}
+.jobCondition{
+    flex:1;
+}
 .activeJob{
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 10px;
     margin-bottom: 15px;
     /*margin: 110px;
@@ -134,7 +159,7 @@ textGrad{
     padding-top: 0px;
     padding-left: 40px;
     padding-right: 40px;
-    /*background: var(--b950);
+    /*background: var(--b900);
     border: 1px solid var(--b600);*/
     border-radius: 15px;
     position: relative;
@@ -175,10 +200,19 @@ textGrad{
 .activeJob a{
     color: var(--b600);
 }
-
+.containerIconsTechs{
+    background: rgb(65, 65, 65);
+    border-radius: 10px;
+    padding:5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
 .inactiveJob{    
-    margin-left: 110px;
-    margin-right: 110px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-top: 10px;
     margin-bottom: 15px;
     /*margin: 110px;
@@ -216,10 +250,15 @@ textGrad{
 
 .tableTimeline{
     display: flex;
+    min-height: 80vh;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
 }
 .timeline{
     border-left: 3px solid grey;
-    margin-left: 100px;
+    margin-left: 110px;
     flex:1;
 }
 .time{
@@ -244,12 +283,50 @@ textGrad{
 .data{
     margin:20px;
     margin-left: 10px;
-    border-left: 2px solid var(--600);
-    border-right: 2px solid var(--600);
+    border-left: 2px solid var(--b600);
+    border-right: 2px solid var(--b600);
     border-radius: 10px;
     padding: 5px;
     width: fit-content;
 }
 .data p{
     margin: 0px;
+}
+
+.navProjects{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    
+}
+.navProjects button{
+    flex:1;
+    background: var(--950);
+    border: 0px;
+    border-left: 2px solid var(--b600);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: var(--b600);
+    font-weight: 600;
+    position: relative;
+}
+
+.navProjects button:nth-child(2){
+    left: -10px;
+}
+.navProjects button:nth-child(3){
+    left: -20px;
+}
+.navProjects button:nth-child(4){
+   
+    left: -30px;
+}
+.navProjects button:nth-child(5){
+    left: -40px;
+}
+
+.navProjects button:hover{
+    background: var(--b900);
 }
