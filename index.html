@@ -4,45 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="css/styles.css" rel="stylesheet">
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let date = new Date();
-            let dayborn = new Date(1999, 2, 16);
-            let dateGradt = new Date(2022,6,7);
-            let yearsOld = parseInt((Math.abs(date-dayborn))/(1000 * 3600 * 24*365));//date.getTime() - dayborn.getTime();
-
-            let diferencia = date-dateGradt;
-            var yearsGrad = Math.floor(diferencia / (365.25 * 24 * 60 * 60 * 1000));
-            var monthsGrad = Math.floor((diferencia % (365.25 * 24 * 60 * 60 * 1000)) / (30.44 * 24 * 60 * 60 * 1000));
-            var daysGrad = Math.floor((diferencia % (30.44 * 24 * 60 * 60 * 1000)) / (24 * 60 * 60 * 1000));
-            document.getElementById("yearsOld").innerHTML = yearsOld;
-            let timeGrad = "";
-            if(yearsGrad == 1){
-                timeGrad = timeGrad + yearsGrad + " año ";
-            }else{
-                timeGrad = timeGrad + yearsGrad + " años ";
-            }
-            if(monthsGrad == 1){
-                timeGrad = timeGrad + monthsGrad + " mes ";
-            }else{
-                timeGrad = timeGrad + monthsGrad + " meses ";
-            }
-            if(daysGrad == 1){
-                timeGrad = timeGrad + " y " + daysGrad + " día ";
-            }else{
-                timeGrad = timeGrad + " y " + daysGrad + " días ";
-            }
-            document.getElementById("timeGrad").innerHTML = timeGrad;
-        })
-        
-        
-        
-    </script>
+    <!--<link href="css/styles.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="css/secondStyles.css">
+    <script src="js/functions.js"></script>
 </head>
 <body>
-    <header>
+    <header class="header">
         <nav>
             <a href="#Exp">Experiencias</a>
             <a href="#Std">Estudios</a>
@@ -54,7 +21,19 @@
             <article class="topTitle">
                 <h1>Gabriel Perero</h1>
                 <textgrad><strong>Analista de Sistemas, Desarrollador de software y Freelance</strong></textgrad><br>
-                <span><a>linkedIn</a><a>github</a><p>gabrielpererojob@gmail.com</p></span>
+                <span>
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 448 512" style="color:#2fd2ff;"><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                    </a>
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 496 512" style="color:#2fd2ff;"><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                    </a>
+                    <br>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 512 512" style="color:#2fd2ff;"><path fill="currentColor" d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg>
+                        gabrielpererojob@gmail.com
+                    </span>
+                </span>
             </article>
             <article class="personalArticle">
                 <p>Hola, tengo <textgrad id="yearsOld">24</textgrad> años y soy un graduado en la carrera de Analisis de Sistemas. Me dedico al desarrollo del software desde que terminé la universidad, hace aproximadamente <textgrad id="timeGrad">más de un año</textgrad>. <br>El desarrollo de software es algo que me gusta mucho, sobre todo la programación, así que es habitual que esté escribiendo código.</p>
@@ -268,10 +247,10 @@
                         <p>Institución: Platzi</p>
                     </div>
                 </div>
-                <div class="stage" style="position: relative;color: rgb(255, 228, 120);">
-                    <div class="time" style="color: rgb(255, 204, 0);">7 julio 2022</div>
-                    <div class="item" style="background: rgb(255, 204, 0);"></div>
-                    <div class="data" style="border-left: 2px solid rgb(255, 204, 0); border-right: 2px solid rgb(255, 204, 0);">
+                <div class="stage">
+                    <div class="time">7 julio 2022</div>
+                    <div class="item2"></div>
+                    <div class="data2">
                         <p>Título Analista de Sistemas.</p>
                         <p>Institución: Universidad Autónoma de Entre Ríos, Facultad de Ciencia y tecnología (UADER FCyT)</p>
                     </div>
@@ -290,15 +269,121 @@
         <section id="Pro" class="section">
             <div class="divh2"><h2>Proyectos</h2></div>
             <section style="width: 100%;">
-                <nav class="navProjects">
-                    <button>Todo</button>
-                    <button>Web</button>
-                    <button>Back-End</button>
-                    <button>Mobil</button>
-                    <button>Escritorio</button>
+                <nav id="navProjects" class="navProjects">
+                    <button class="active" onclick="changeViewProjects('Todo')">Todo</button>
+                    <button onclick="changeViewProjects('Web')">Web</button>
+                    <button onclick="changeViewProjects('BackEnd')">Back-End</button>
+                    <button onclick="changeViewProjects('Mobil')">Mobil</button>
+                    <button onclick="changeViewProjects('Desktop')">Desktop</button>
                 </nav>
-                <article style="background-color: red; width: 100%; height: 100%;">
-                    
+                <article id="containerProjects" class="containerProjects">
+                    <div class="project Todo Desktop">
+                        <header class="title">Projecto SIC (Sistem Inputs Controller)</header>
+                        <div class="image">
+                            <img class="img" src="img/projects/SIC.png" alt="imagen del programa SIC Sistem Input Controller" title="SIC Sistem Input Controller">
+                        </div>
+                        <footer class="footer">
+                            <p>Aplicación de escritorio para Windows</p>
+                            <p>creado en Visual Studio 2022</p>
+                            <p>C# - Git</p>
+                        </footer>
+                        <div class="tecs">
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                                <path fill="currentColor" d="M 25 2 C 24.285156 2 23.570313 2.179688 22.933594 2.539063 L 6.089844 12.003906 C 4.800781 12.726563 4 14.082031 4 15.535156 L 4 34.464844 C 4 35.917969 4.800781 37.273438 6.089844 37.996094 L 22.933594 47.460938 C 23.570313 47.820313 24.285156 48 25 48 C 25.714844 48 26.429688 47.820313 27.066406 47.460938 L 43.910156 38 C 45.199219 37.273438 46 35.917969 46 34.464844 L 46 15.535156 C 46 14.082031 45.199219 12.726563 43.910156 12.003906 L 27.066406 2.539063 C 26.429688 2.179688 25.714844 2 25 2 Z M 25 13 C 28.78125 13 32.277344 14.753906 34.542969 17.738281 L 30.160156 20.277344 C 28.84375 18.835938 26.972656 18 25 18 C 21.140625 18 18 21.140625 18 25 C 18 28.859375 21.140625 32 25 32 C 26.972656 32 28.84375 31.164063 30.160156 29.722656 L 34.542969 32.261719 C 32.277344 35.246094 28.78125 37 25 37 C 18.382813 37 13 31.617188 13 25 C 13 18.382813 18.382813 13 25 13 Z M 35 20 L 37 20 L 37 22 L 39 22 L 39 20 L 41 20 L 41 22 L 43 22 L 43 24 L 41 24 L 41 26 L 43 26 L 43 28 L 41 28 L 41 30 L 39 30 L 39 28 L 37 28 L 37 30 L 35 30 L 35 28 L 33 28 L 33 26 L 35 26 L 35 24 L 33 24 L 33 22 L 35 22 Z M 37 24 L 37 26 L 39 26 L 39 24 Z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 512 512">
+                                <path fill="currentColor" d="M439.6 236.1L244 40.5a28.9 28.9 0 0 0 -40.8 0l-40.7 40.6 51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.2 199v121.9c25.3 12.5 22.3 41.9 9.1 55a34.3 34.3 0 0 1 -48.6 0c-17.6-17.6-11.1-46.9 11.3-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1a28.9 28.9 0 0 0 0 40.8l195.6 195.6a28.9 28.9 0 0 0 40.8 0l194.7-194.7a28.9 28.9 0 0 0 0-40.8z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                                <path fill="currentColor" d="M 35.445312 2.0117188 C 35.056812 2.0253438 34.669266 2.1265938 34.322266 2.3085938 C 35.227266 2.7565937 35.865703 3.6414062 35.970703 4.6914062 C 35.988703 4.8174062 36 4.9322812 36 4.9882812 L 36 44.988281 C 36 46.174281 35.306594 47.190734 34.308594 47.677734 C 34.672594 47.876734 35.079 47.988281 35.5 47.988281 C 35.873 47.988281 36.224969 47.901859 36.542969 47.755859 L 36.544922 47.759766 C 38.152922 46.927766 46.192281 42.764703 46.488281 42.595703 C 47.421281 42.060703 48 41.061281 48 39.988281 L 48 9.9882812 C 48 8.9902813 47.505734 8.0619062 46.677734 7.5039062 C 46.357734 7.2869063 36.582031 2.2363281 36.582031 2.2363281 L 36.580078 2.2402344 C 36.224078 2.0727344 35.833813 1.9980938 35.445312 2.0117188 z M 33 3.9882812 C 32.744125 3.9882812 32.487969 4.08575 32.292969 4.28125 C 32.292969 4.28125 26.568469 10.718844 20.230469 17.839844 L 27.724609 23.970703 L 34 18.685547 L 34 4.9882812 C 34 4.7322812 33.902031 4.47625 33.707031 4.28125 C 33.511531 4.08575 33.255875 3.9882812 33 3.9882812 z M 8 10.988281 C 7.844 10.988281 7.5538594 10.988844 6.2558594 11.589844 C 5.5408594 11.920844 3.0507812 13.228516 3.0507812 13.228516 C 2.7207812 13.407516 2.4545781 13.687719 2.2675781 14.011719 C 2.3435781 13.999719 2.4190469 13.988281 2.4980469 13.988281 L 2.5 13.988281 C 3.168 13.988281 3.5776562 14.454469 3.7226562 14.605469 C 3.7226562 14.605469 31.929969 45.332313 32.292969 45.695312 C 32.487969 45.890313 32.742047 45.988281 32.998047 45.988281 C 33.254047 45.988281 33.510078 45.890313 33.705078 45.695312 C 33.900078 45.500312 34 45.244281 34 44.988281 L 34 31.658203 C 34 31.658203 9.53375 11.661813 9.34375 11.507812 C 8.97575 11.173813 8.497 10.988281 8 10.988281 z M 2.1992188 15.988281 C 2.0892188 15.988281 2 16.078453 2 16.189453 L 2 34.794922 C 2 34.901922 2.0873125 34.990234 2.1953125 34.990234 C 2.2513125 34.990234 2.3009375 34.964781 2.3359375 34.925781 L 8 28.638672 L 8 22.007812 L 2.3417969 16.046875 C 2.3057969 16.010875 2.2542188 15.988281 2.1992188 15.988281 z M 12.253906 26.802734 C 12.253906 26.802734 3.6585469 36.452781 3.5605469 36.550781 C 3.2895469 36.821781 2.915 36.988281 2.5 36.988281 C 2.422 36.988281 2.3464844 36.978797 2.2714844 36.966797 C 2.4734844 37.317797 2.7697188 37.607156 3.1367188 37.785156 L 3.1328125 37.791016 C 4.0028125 38.233016 6.8739531 39.691703 7.2519531 39.845703 C 7.4899531 39.940703 7.741 39.988281 8 39.988281 C 8.347 39.988281 8.6900469 39.898656 8.9980469 39.722656 C 9.0210469 39.709656 17.527344 32.552734 17.527344 32.552734 L 12.253906 26.802734 z"></path>
+                            </svg>
+                            
+                        </div>
+                    </div>
+                    <div class="project Todo Web">
+                        <header class="title">Torre de Hanoi</header>
+                        <div class="image">
+                            <img class="icon" src="" alt="">
+                            <img class="img" src="img/projects/Torre de Hanoi.png" alt="imagen de la web Torre de Hanoi" title="Torre de Hanoi">
+                        </div>
+                        <footer class="footer">
+                            <p>Aplicación Web</p>
+                            <p>Creado como un entretenimiento y practica de desarrollo web. El objetivo era crear algo simple sin aplicar frameworks ni librerías</p>
+                            <p>HTML- CSS - JavaScript</p>
+                        </footer>
+                        <div class="tecs">
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 384 512">
+                                <path fill="currentColor" d="M0 32l34.9 395.8L191.5 480l157.6-52.2L384 32H0zm308.2 127.9H124.4l4.1 49.4h175.6l-13.6 148.4-97.9 27v.3h-1.1l-98.7-27.3-6-75.8h47.7L138 320l53.5 14.5 53.7-14.5 6-62.2H84.3L71.5 112.2h241.1l-4.4 47.7z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 384 512">
+                                <path fill="currentColor" d="M0 32l34.9 395.8L192 480l157.1-52.2L384 32H0zm313.1 80l-4.8 47.3L193 208.6l-.3 .1h111.5l-12.8 146.6-98.2 28.7-98.8-29.2-6.4-73.9h48.9l3.2 38.3 52.6 13.3 54.7-15.4 3.7-61.6-166.3-.5v-.1l-.2 .1-3.6-46.3L193.1 162l6.5-2.7H76.7L70.9 112h242.2z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 448 512">
+                                <path fill="currentColor" d="M0 32v448h448V32H0zm243.8 349.4c0 43.6-25.6 63.5-62.9 63.5-33.7 0-53.2-17.4-63.2-38.5l34.3-20.7c6.6 11.7 12.6 21.6 27.1 21.6 13.8 0 22.6-5.4 22.6-26.5V237.7h42.1v143.7zm99.6 63.5c-39.1 0-64.4-18.6-76.7-43l34.3-19.8c9 14.7 20.8 25.6 41.5 25.6 17.4 0 28.6-8.7 28.6-20.8 0-14.4-11.4-19.5-30.7-28l-10.5-4.5c-30.4-12.9-50.5-29.2-50.5-63.5 0-31.6 24.1-55.6 61.6-55.6 26.8 0 46 9.3 59.8 33.7L368 290c-7.2-12.9-15-18-27.1-18-12.3 0-20.1 7.8-20.1 18 0 12.6 7.8 17.7 25.9 25.6l10.5 4.5c35.8 15.3 55.9 31 55.9 66.2 0 37.8-29.8 58.6-69.7 58.6z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 448 512">
+                                <path title="algo" fill="currentColor" d="M448 48V384c-63.1 22.5-82.3 32-119.5 32c-62.8 0-86.6-32-149.3-32c-20.6 0-36.6 3.6-51.2 8.2v-64c14.6-4.6 30.6-8.2 51.2-8.2c62.7 0 86.5 32 149.3 32c20.4 0 35.6-3 55.5-9.3v-208c-19.9 6.3-35.1 9.3-55.5 9.3c-62.8 0-86.6-32-149.3-32c-50.8 0-74.9 20.6-115.2 28.7V448c0 17.7-14.3 32-32 32s-32-14.3-32-32V64C0 46.3 14.3 32 32 32s32 14.3 32 32V76.7c40.3-8 64.4-28.7 115.2-28.7c62.7 0 86.5 32 149.3 32c37.1 0 56.4-9.5 119.5-32z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 48 48">
+                                <path fill="currentColor" d="M44,11.11v25.78c0,1.27-0.79,2.4-1.98,2.82l-8.82,4.14L34,33V15L33.2,4.15l8.82,4.14 C43.21,8.71,44,9.84,44,11.11z"/>
+                                <path fill="currentColor" d="M9,33.896L34,15V5.353c0-1.198-1.482-1.758-2.275-0.86L4.658,29.239 c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574C7.304,34.37,8.271,34.43,9,33.896z"/>
+                                <path fill="currentColor" d="M9,14.104L34,33v9.647c0,1.198-1.482,1.758-2.275,0.86L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project Todo Mobil">
+                        <header class="title">Archery Statistics</header>
+                        <div class="image">
+                            <img class="icon" title="icono" src="img/projects/iconArcheryStatistics.png" alt="icono de la aplicación">
+                            <img class="img" title="Archery Statistics" src="img/projects/Archery Statistics.jpg" alt="imagen de la aplicación Archery Statistics">
+                        </div>
+                        <footer class="footer">
+                            <p>Aplicación para dispositivos móviles Android</p>
+                            <p>Aplicación creada con el objetivo de registrar evaluar y obtener estadísticas en la práctica del deporte Tiro con Arco.</p>
+                            <p>Flutter(Dart) - Android Studio - Android</p>
+                        </footer>
+                        <div class="tecs">
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M3.5 12.5L6.5 15.5 19 3 13 3zM19 12L13 12 8 17 13 22 19 22 14 17z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                                <path fill="currentColor" d="M7.91 9.32L8 9.41V35.3l-5.09-5.09c-1.81-1.81-2.32-4.59-1.27-6.92L7.91 9.32zM35.3 8H9.41L9.32 7.91l13.97-6.27c2.33-1.05 5.11-.54 6.92 1.27L35.3 8zM37.59 39H11.71l-.54-.54C10.42 37.7 10 36.7 10 35.63V11.41L37.59 39zM13.71 41H39v6c0 .55-.45 1-1 1H21.1c-.27 0-.52-.11-.71-.29l-4.7-4.7.02-.02L13.71 41zM48 21.1V38c0 .55-.45 1-1 1h-6.58L11.41 10h24.22c1.07 0 2.07.42 2.83 1.17l4.53 4.54.02-.02 4.7 4.7C47.89 20.58 48 20.83 48 21.1z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                                <path fill="currentColor" d="M 16.851562 0.01171875 C 16.72325 0.030984375 16.595766 0.074484375 16.478516 0.14648438 C 16.006516 0.43448438 15.858484 1.0504844 16.146484 1.5214844 L 17.787109 4.203125 C 14.836798 6.1839524 12.737788 9.3350589 12.169922 13 L 37.830078 13 C 37.262801 9.3350589 35.163102 6.1839524 32.212891 4.203125 L 33.853516 1.5214844 C 34.141516 1.0504844 33.993484 0.43448437 33.521484 0.14648438 C 33.049484 -0.14151562 32.434484 0.007515625 32.146484 0.47851562 L 30.472656 3.2148438 C 28.809508 2.4391021 26.957877 2 25 2 C 23.042123 2 21.190519 2.4391021 19.527344 3.2148438 L 17.853516 0.47851562 C 17.636766 0.12526562 17.2365 -0.046078125 16.851562 0.01171875 z M 8 5 C 5.794 5 4 6.794 4 9 C 4 11.206 5.794 13 8 13 L 10.148438 13 C 10.558437 9.946 11.888563 7.187 13.851562 5 L 8 5 z M 19.5 7 C 20.328 7 21 7.672 21 8.5 C 21 9.328 20.328 10 19.5 10 C 18.672 10 18 9.328 18 8.5 C 18 7.672 18.672 7 19.5 7 z M 30.5 7 C 31.328 7 32 7.672 32 8.5 C 32 9.328 31.328 10 30.5 10 C 29.672 10 29 9.328 29 8.5 C 29 7.672 29.672 7 30.5 7 z M 4 13.460938 L 4 39 C 4 41.757 6.243 44 9 44 L 13.279297 44 L 12.849609 44.912109 C 12.060609 46.589109 12.653219 48.612578 14.199219 49.517578 C 14.738219 49.832578 15.350703 50 15.970703 50 C 17.339703 50 18.596781 49.206563 19.175781 47.976562 L 21.037109 44 L 28.962891 44 L 30.820312 47.970703 C 31.402312 49.205703 32.660297 50 34.029297 50 C 34.649297 50 35.261781 49.832578 35.800781 49.517578 C 37.346781 48.612578 37.940391 46.589109 37.150391 44.912109 L 36.720703 44 L 39 44 L 39 24 C 39 23.448 39.447 23 40 23 L 44 23 C 46.206 23 48 21.206 48 19 C 48 16.794 46.206 15 44 15 L 40 15 L 12 15 L 8 15 C 6.462 15 5.063 14.414937 4 13.460938 z M 25 20 C 25.553 20 26 20.448 26 21 L 26 23.142578 C 27.721 23.589578 29 25.142 29 27 C 29 28.098 28.554938 29.093406 27.835938 29.816406 L 35.341797 45.763672 C 35.680797 46.483672 35.476016 47.391969 34.791016 47.792969 C 34.549016 47.934969 34.286297 48 34.029297 48 C 33.466297 48 32.888813 47.666047 32.632812 47.123047 L 31.171875 44 L 27.130859 35.363281 C 26.284859 33.555281 23.715141 33.555281 22.869141 35.363281 L 18.828125 44 L 17.367188 47.123047 C 17.111187 47.666047 16.533703 48 15.970703 48 C 15.713703 48 15.450984 47.934969 15.208984 47.792969 C 14.522984 47.391969 14.320203 46.484625 14.658203 45.765625 L 22.162109 29.816406 C 21.444109 29.092406 21 28.098 21 27 C 21 25.142 22.279 23.589578 24 23.142578 L 24 21 C 24 20.448 24.447 20 25 20 z M 48 23.460938 C 46.937 24.414938 45.538 25 44 25 L 41 25 L 41 45 L 41 49 C 41 49.552 41.447 50 42 50 L 43 50 C 45.757 50 48 47.757 48 45 L 48 23.460938 z M 25 25 A 2 2 0 0 0 25 29 A 2 2 0 0 0 25 25 z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 576 512">
+                                <path fill="currentColor" d="M420.6 301.9a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m273.7-144.5 47.9-83a10 10 0 1 0 -17.3-10h0l-48.5 84.1a301.3 301.3 0 0 0 -246.6 0L116.2 64.5a10 10 0 1 0 -17.3 10h0l47.9 83C64.5 202.2 8.2 285.6 0 384H576c-8.2-98.5-64.5-181.8-146.9-226.6"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="project Todo Mobil">
+                        <header class="title">Arrecife Mobil</header>
+                        <div class="image">
+                            <img class="icon" title="icono" src="img/projects/iconArrecife Mobil.png" alt="icono de la aplicación">
+                            <img class="img" title="Arrecife Mobil" src="img/projects/Arrecife Mobil.jpg" alt="imagen de la aplicación Arrecife Mobil">
+                        </div>
+                        <footer class="footer">
+                            <p>Aplicación para dispositivos móviles Android</p>
+                            <p>Aplicación creada con el objetivo de almacenar información de manera segura.</p>
+                            <p>El objetivo principal de la aplicación es poder almacenar de manera segura las credenciales de las cuentas que nos creamos en diferentes plataformas. Estas credenciales pueden ser la contraseña, el nombre de usuario y el correo.</p>
+                            <p>Flutter(Dart) - Android Studio - Android</p>
+                        </footer>
+                        <div class="tecs">
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+                                <path fill="currentColor" d="M3.5 12.5L6.5 15.5 19 3 13 3zM19 12L13 12 8 17 13 22 19 22 14 17z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                                <path fill="currentColor" d="M7.91 9.32L8 9.41V35.3l-5.09-5.09c-1.81-1.81-2.32-4.59-1.27-6.92L7.91 9.32zM35.3 8H9.41L9.32 7.91l13.97-6.27c2.33-1.05 5.11-.54 6.92 1.27L35.3 8zM37.59 39H11.71l-.54-.54C10.42 37.7 10 36.7 10 35.63V11.41L37.59 39zM13.71 41H39v6c0 .55-.45 1-1 1H21.1c-.27 0-.52-.11-.71-.29l-4.7-4.7.02-.02L13.71 41zM48 21.1V38c0 .55-.45 1-1 1h-6.58L11.41 10h24.22c1.07 0 2.07.42 2.83 1.17l4.53 4.54.02-.02 4.7 4.7C47.89 20.58 48 20.83 48 21.1z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 50 50">
+                                <path fill="currentColor" d="M 16.851562 0.01171875 C 16.72325 0.030984375 16.595766 0.074484375 16.478516 0.14648438 C 16.006516 0.43448438 15.858484 1.0504844 16.146484 1.5214844 L 17.787109 4.203125 C 14.836798 6.1839524 12.737788 9.3350589 12.169922 13 L 37.830078 13 C 37.262801 9.3350589 35.163102 6.1839524 32.212891 4.203125 L 33.853516 1.5214844 C 34.141516 1.0504844 33.993484 0.43448437 33.521484 0.14648438 C 33.049484 -0.14151562 32.434484 0.007515625 32.146484 0.47851562 L 30.472656 3.2148438 C 28.809508 2.4391021 26.957877 2 25 2 C 23.042123 2 21.190519 2.4391021 19.527344 3.2148438 L 17.853516 0.47851562 C 17.636766 0.12526562 17.2365 -0.046078125 16.851562 0.01171875 z M 8 5 C 5.794 5 4 6.794 4 9 C 4 11.206 5.794 13 8 13 L 10.148438 13 C 10.558437 9.946 11.888563 7.187 13.851562 5 L 8 5 z M 19.5 7 C 20.328 7 21 7.672 21 8.5 C 21 9.328 20.328 10 19.5 10 C 18.672 10 18 9.328 18 8.5 C 18 7.672 18.672 7 19.5 7 z M 30.5 7 C 31.328 7 32 7.672 32 8.5 C 32 9.328 31.328 10 30.5 10 C 29.672 10 29 9.328 29 8.5 C 29 7.672 29.672 7 30.5 7 z M 4 13.460938 L 4 39 C 4 41.757 6.243 44 9 44 L 13.279297 44 L 12.849609 44.912109 C 12.060609 46.589109 12.653219 48.612578 14.199219 49.517578 C 14.738219 49.832578 15.350703 50 15.970703 50 C 17.339703 50 18.596781 49.206563 19.175781 47.976562 L 21.037109 44 L 28.962891 44 L 30.820312 47.970703 C 31.402312 49.205703 32.660297 50 34.029297 50 C 34.649297 50 35.261781 49.832578 35.800781 49.517578 C 37.346781 48.612578 37.940391 46.589109 37.150391 44.912109 L 36.720703 44 L 39 44 L 39 24 C 39 23.448 39.447 23 40 23 L 44 23 C 46.206 23 48 21.206 48 19 C 48 16.794 46.206 15 44 15 L 40 15 L 12 15 L 8 15 C 6.462 15 5.063 14.414937 4 13.460938 z M 25 20 C 25.553 20 26 20.448 26 21 L 26 23.142578 C 27.721 23.589578 29 25.142 29 27 C 29 28.098 28.554938 29.093406 27.835938 29.816406 L 35.341797 45.763672 C 35.680797 46.483672 35.476016 47.391969 34.791016 47.792969 C 34.549016 47.934969 34.286297 48 34.029297 48 C 33.466297 48 32.888813 47.666047 32.632812 47.123047 L 31.171875 44 L 27.130859 35.363281 C 26.284859 33.555281 23.715141 33.555281 22.869141 35.363281 L 18.828125 44 L 17.367188 47.123047 C 17.111187 47.666047 16.533703 48 15.970703 48 C 15.713703 48 15.450984 47.934969 15.208984 47.792969 C 14.522984 47.391969 14.320203 46.484625 14.658203 45.765625 L 22.162109 29.816406 C 21.444109 29.092406 21 28.098 21 27 C 21 25.142 22.279 23.589578 24 23.142578 L 24 21 C 24 20.448 24.447 20 25 20 z M 48 23.460938 C 46.937 24.414938 45.538 25 44 25 L 41 25 L 41 45 L 41 49 C 41 49.552 41.447 50 42 50 L 43 50 C 45.757 50 48 47.757 48 45 L 48 23.460938 z M 25 25 A 2 2 0 0 0 25 29 A 2 2 0 0 0 25 25 z"/>
+                            </svg>
+                            <svg class="iconTech" xmlns="http://www.w3.org/2000/svg" height="40" width="40" viewBox="0 0 576 512">
+                                <path fill="currentColor" d="M420.6 301.9a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1 -24 24m273.7-144.5 47.9-83a10 10 0 1 0 -17.3-10h0l-48.5 84.1a301.3 301.3 0 0 0 -246.6 0L116.2 64.5a10 10 0 1 0 -17.3 10h0l47.9 83C64.5 202.2 8.2 285.6 0 384H576c-8.2-98.5-64.5-181.8-146.9-226.6"/>
+                            </svg>
+                        </div>
+                    </div>
                 </article>
     
             </section>
