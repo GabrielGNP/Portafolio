@@ -401,9 +401,16 @@ textGrad{
     width: 100%; 
     height: 100%;
     margin: 30px;
-    display: flex;
+    /*display: flex;
     flex-flow: wrap;
-    justify-content: center;
+    justify-content: center;*/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* Define el ancho de las columnas */
+    grid-template-rows: repeat(auto-fill, minmax(350px, 1fr)); /* Define el ancho de las columnas */
+    grid-auto-rows: 300px; /* Define la altura de las filas */
+    grid-auto-flow: dense; /* Permite reorganizar automáticamente los elementos */
+    align-items: center;
+    justify-items: center;
 }
 .project{
     width: 300px; 
@@ -415,6 +422,12 @@ textGrad{
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 20px;
+    border: 1px solid #2fd2ff;
+    box-shadow: 0px 0px 100px -60px #2fd2ff;
+}
+.project:nth-child(even){
+    border: 1px solid #e32fff;
+    box-shadow: 0px 0px 100px -60px #e32fff;
 }
 .project .title{
     width: 100%;
@@ -431,8 +444,6 @@ textGrad{
     box-shadow: 0px 0px 10px 0px #2fd2ff;
 }
 .project .image{
-    padding-left: 15px;
-    padding-right: 15px;
     margin-top: 10px;
     height: 200px;
     text-align-last: center;
@@ -530,22 +541,21 @@ textGrad{
     color:#e32fff;
 }
 .project.Mobil{
-    height: 600px;
+    height: 660px;
+    grid-row: span 2;
 }
 .project.Mobil .img{
-    padding-left: 15px;
-    padding-right: 15px;
     margin-top: 10px;
-    height: 500px;
+    height: 550px;
     text-align-last: center;
 }
 .project.Mobil .image .img{
-    height: 500px;
+    height: 550px;
 }
 .project.Mobil .image .icon{
     position: absolute;
-    right: -40px;
-    top: 30px;
+    right: -10px;
+    top: 40px;
     height: 80px;
     
     background-color: var(--950);
@@ -555,14 +565,6 @@ textGrad{
     box-shadow: 0px 0px 10px 0px #2fd2ff;
 }
 .project:nth-child(even).Mobil .image .icon{
-    position: absolute;
-    right: -40px;
-    top: 30px;
-    height: 80px;
-    
-    background-color: var(--950);
-    border-radius: 30%;
-    padding: 10px;
     border: 2px solid #e32fff;
     box-shadow: 0px 0px 10px 0px #e32fff;
 }
