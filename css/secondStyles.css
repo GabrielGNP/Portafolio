@@ -11,6 +11,7 @@
 }
 html{
     scroll-behavior: smooth;
+    background: #18181b;
 }
 body{
     background: radial-gradient(#262626,#18181b,#18181b);
@@ -31,7 +32,7 @@ body{
     width: 100%;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 20;
     height: 67px;
     max-height: 67px;
 }
@@ -277,6 +278,9 @@ textGrad{
     margin-left: 110px;
     flex:1;
 }
+.stage{
+    position: relative;
+}
 .time{
     position: absolute;
     left: -120px;
@@ -405,17 +409,18 @@ textGrad{
     flex-flow: wrap;
     justify-content: center;*/
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); /* Define el ancho de las columnas */
-    grid-template-rows: repeat(auto-fill, minmax(350px, 1fr)); /* Define el ancho de las columnas */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Define el ancho de las columnas */
+    grid-template-rows: repeat(auto-fill, minmax(300px, 1fr)); /* Define el ancho de las columnas */
     grid-auto-rows: 300px; /* Define la altura de las filas */
     grid-auto-flow: dense; /* Permite reorganizar automáticamente los elementos */
+    grid-gap: 30px;
     align-items: center;
     justify-items: center;
 }
 .project{
-    width: 300px; 
-    height: 300px;
-    background-color: rgb(61, 54, 54);
+    width: 275px; 
+    height: 275px;
+    background: rgb(61, 54, 54);
     position: relative;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -442,14 +447,28 @@ textGrad{
     padding-left: 15px;
     padding-right: 15px;
     box-shadow: 0px 0px 10px 0px #2fd2ff;
+    position: relative;
+    z-index: 10;
 }
 .project .image{
-    margin-top: 10px;
-    height: 200px;
+    background: rgb(61, 54, 54);
+    padding-top: 10px;
+    height: 223px;
     text-align-last: center;
+    position: relative;
+    z-index: 10;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
-.project .image .img{
+.project.Mobil .image{
+    height: 608px;
+}
+.project .image .imgH{
     height: 200px;
+}
+.project .image .imgW{
+    width: 95%;
+    padding: 0px;
 }
 .project .footer{
     position: absolute;
@@ -464,10 +483,12 @@ textGrad{
     padding-top: 10px;
     transition: 0.35s linear;
     height: 30px;
-    overflow: hidden;    
+    overflow: hidden;  
+    z-index: 10;
 }
 .project:hover .footer{
     height: 70%;
+    z-index: 10;
 }
 .project .footer p{
     margin: 0px;
@@ -507,10 +528,9 @@ textGrad{
 }
 .project .tecs{
     position: absolute;
-    top: 0px;
+    top: 5%;
     left: 0px;
-    z-index: -1;
-    
+    z-index: 1;
     display: flex;
     flex-direction: column;
     
@@ -518,7 +538,7 @@ textGrad{
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     width: 80px;
-    height: 99%;
+    height: 90%;
     padding: 10px;
     
     transition: 0.55s;
