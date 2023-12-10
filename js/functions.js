@@ -31,13 +31,56 @@ document.addEventListener("DOMContentLoaded", function() {
     dialogSIC = document.getElementById("dialogSIC");
 })
 
-function openDialog(){
-    //dialogSIC.showModal();
-    windows
+function openDialog(id){
+    
+    switch(id)
+    {
+        case "dialogSIC":
+            window.dialogSIC.showModal();
+            break;
+        case "dialogTorreHanoi":
+            window.dialogTorreHanoi.showModal();
+            break;
+        case "dialogArcheryStatistics":
+            window.dialogArcheryStatistics.showModal();
+            break;
+        case "dialogArrecifeMobil":
+            window.dialogArrecifeMobil.showModal();
+            break;
+        case "dialogBiblioCode":
+            window.dialogBiblioCode.showModal();
+            break;    
+        case "dialogGestorDeProductos":
+            window.dialogGestorDeProductos.showModal();
+            break;  
+            
+    }
+
 }
 
 function closeDialog(id){
-    
+    switch(id)
+    {
+        case "dialogSIC":
+            window.dialogSIC.close();
+            break;
+        case "dialogTorreHanoi":
+            window.dialogTorreHanoi.close();
+            break;
+        case "dialogArcheryStatistics":
+            window.dialogArcheryStatistics.close();
+            break;
+        case "dialogArrecifeMobil":
+            window.dialogArrecifeMobil.close();
+            break;
+        case "dialogBiblioCode":
+            window.dialogBiblioCode.close();
+            break;
+        case "dialogGestorDeProductos":
+            window.dialogGestorDeProductos.close();
+            break;
+            
+    }
     //dialogSIC.close();
 }
 

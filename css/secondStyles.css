@@ -226,6 +226,12 @@ textGrad{
     justify-content: space-evenly;
     flex-flow: wrap;
 }
+.containerIconsTechs .iconTech{
+    background: rgba(255, 255, 255, 0.4);
+    border-radius:15px;
+    padding:2px;
+    margin: 0px;
+}
 .activeJob:nth-child(odd) .containerIconsTechs{
     background: #e32fff54;
     box-shadow: 0px 0px 30px 0px #e32fff54;
@@ -453,7 +459,7 @@ textGrad{
 .project .image{
     background: rgb(61, 54, 54);
     padding-top: 10px;
-    height: 223px;
+    height: 222px;
     text-align-last: center;
     position: relative;
     z-index: 10;
@@ -597,12 +603,14 @@ textGrad{
     height: 0px;
     transition: 0.45s;
 }
+.project:nth-child(even) .iconMoreInfo{
+    color:#4b1454;
+}
 .project:hover .iconMoreInfo{
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 11;
-    color:#0f4756;
     height: 30px;
 }
 
@@ -610,11 +618,19 @@ textGrad{
 dialog{
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
+    border: 0px;
+    background: transparent;
     position: fixed;
     top: 0px;
     left: 0px;
     z-index: 20;
+    margin: 0px;
+    padding: 0px;
+    max-width: 100vw;
+    max-height: 100vh;
+}
+dialog::backdrop{
+    background: rgba(0, 0, 0, 0.6);
 }
 dialog div{
     position: relative;
@@ -636,6 +652,8 @@ dialog div{
 dialog h1{
     margin: 0px;
     font-size: 20px;
+    color: #2fd2ff;
+    text-shadow: 2px -2px 5px #e32fff, 1px 2px 1px #2297b7;
 }
 dialog h2{
     color: rgb(198, 198, 198);
@@ -667,6 +685,13 @@ dialog button{
     background: var(--600);
     border: 4px solid var(--950)
 }
+dialog button:focus-visible{
+    outline: 0px;
+}
+dialog button:hover{
+    color: #494949;
+    background: #29aec5;
+}
 dialog .linkProject{
     position: absolute;
     bottom: -31px;
@@ -679,4 +704,7 @@ dialog .linkProject{
     border-bottom-right-radius: 20px;
     border-bottom: 1px solid #2fd2ff;
     color: #e32fff;
+}
+dialog .linkProject:focus-visible{
+    outline: 0px;
 }
