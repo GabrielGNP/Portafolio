@@ -588,3 +588,95 @@ textGrad{
     border: 2px solid #e32fff;
     box-shadow: 0px 0px 10px 0px #e32fff;
 }
+.project .iconMoreInfo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 11;
+    color:#0f4756;
+    height: 0px;
+    transition: 0.45s;
+}
+.project:hover .iconMoreInfo{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 11;
+    color:#0f4756;
+    height: 30px;
+}
+
+
+dialog{
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 20;
+}
+dialog div{
+    position: relative;
+    top: calc(50vh - 25vh);
+    left: calc(50vh - 40vh);
+    width: 80vw;
+    height: 50vh;
+    background: var(--950);
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 1px solid #2fd2ff;
+    border-radius: 1vw;
+
+    box-shadow: 40px -40px 80px -50px #2fd2ff,
+        -40px 40px 80px -50px #e32fff;
+    
+}
+dialog h1{
+    margin: 0px;
+    font-size: 20px;
+}
+dialog h2{
+    color: rgb(198, 198, 198);
+    font-size: 16px;
+    margin: 5px;
+    text-decoration: underline;
+}
+dialog p{
+    color: rgb(147, 147, 147);
+    font-size: 15px;
+    
+}
+dialog p.line{
+    width: 100%;
+    margin-top: 30px;
+    border-bottom: 1px solid rgb(198, 198, 198);
+}
+dialog button{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--950);
+    background: var(--600);
+    border: 4px solid var(--950)
+}
+dialog .linkProject{
+    position: absolute;
+    bottom: -31px;
+    left: 20px;
+    background: #1d1d1d;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom: 1px solid #2fd2ff;
+    color: #e32fff;
+}

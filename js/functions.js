@@ -1,3 +1,4 @@
+var dialogSIC;
 document.addEventListener("DOMContentLoaded", function() {
     let date = new Date();
     let dayborn = new Date(1999, 2, 16);
@@ -26,7 +27,19 @@ document.addEventListener("DOMContentLoaded", function() {
         timeGrad = timeGrad + " y " + daysGrad + " días ";
     }
     document.getElementById("timeGrad").innerHTML = timeGrad;
+
+    dialogSIC = document.getElementById("dialogSIC");
 })
+
+function openDialog(){
+    //dialogSIC.showModal();
+    windows
+}
+
+function closeDialog(id){
+    
+    //dialogSIC.close();
+}
 
 
 function changeViewProjects(tipeProjects){
@@ -76,3 +89,5 @@ function changeViewProjects(tipeProjects){
             break;
     }
 }
+
+
