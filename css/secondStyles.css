@@ -14,7 +14,7 @@ html{
     background: #18181b;
 }
 body{
-    background: radial-gradient(#262626,#18181b,#18181b);
+    background: linear-gradient(90deg,#18181b,#18181b,#262626,#18181b,#18181b);
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -32,7 +32,7 @@ body{
     width: 100%;
     position: sticky;
     top: 0px;
-    z-index: 20;
+    z-index: 30;
     height: 67px;
     max-height: 67px;
 }
@@ -71,6 +71,9 @@ nav a:hover{
     border: 0px solid;
     text-shadow: 0px -3px 10px #e32fff,0px 3px 10px #2fd2ff;
 }
+.buttonMenuMobil{
+    display: none;
+}
 main{
     margin-right: 10vw;
     margin-left: 10vw;
@@ -105,6 +108,40 @@ textGrad{
 .topTitle textgrad{
     display: block;
     font-size: 25px;
+}
+
+.iconsContact{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.iconsContact a{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconsContact span{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.iconContact{
+    position: relative;
+    color: #2fd2ff;
+}
+.iconContact:hover{
+    position: absolute;
+    height: 45px;
+    width: 45px;
+    transition: 0.2s;
+    color: #e32fff;
+
 }
 
 .divh2{
@@ -350,9 +387,16 @@ textGrad{
     background: #18181b;
     
 }
-.navProjects button{
+.navProjects .contentButton{
     flex:1;
     background: var(--950);
+    border: 0px;
+    font-weight: 600;
+    position: relative;
+    font-size: 15px;
+    transition: 0.2s linear;
+}
+.navProjects .contentButton button{
     border: 0px;
     border-left: 2px solid #6c1679;
     border-top-left-radius: 10px;
@@ -360,47 +404,38 @@ textGrad{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     color: #6c1679;
+    background: var(--950);
     font-weight: 600;
     position: relative;
     font-size: 15px;
     transition: 0.2s linear;
+    width: 100%;
+    height: 100%;
 }
 
-.navProjects button:nth-child(2){
-    left: -10px;
+.navProjects .contentButton:nth-child(even) button{
     border-left: 2px solid #145364;
     color: #145364;
 }
-.navProjects button:nth-child(3){
-    left: -20px;
-}
-.navProjects button:nth-child(4){
-    left: -30px;
-    border-left: 2px solid #145364;
-    color: #145364;
-    
-}
-.navProjects button:nth-child(5){
-    left: -40px;
-}
 
-.navProjects button:nth-child(odd):hover{
+
+.navProjects .contentButton:nth-child(odd) button:hover{
     background: var(--950);
     text-shadow: 0px 0px 10px #e32fff;
     color: #e32fff;
 }
-.navProjects button:nth-child(even):hover{
+.navProjects .contentButton:nth-child(even) button:hover{
     background: var(--950);
     text-shadow: 0px 0px 10px #2fd2ff;
     color: #2fd2ff;
 }
-.navProjects button:nth-child(odd).active{
+.navProjects .contentButton:nth-child(odd) button.active{
     text-shadow: 0px 0px 10px #e32fff;
     color: #e32fff;
     border-left: 2px solid #e32fff;
     box-shadow: -10px 0px 10px -10px #e32fff;
 }
-.navProjects button:nth-child(even).active{
+.navProjects .contentButton:nth-child(even) button.active{
     text-shadow: 0px 0px 10px #2fd2ff;
     color: #2fd2ff;
     border-left: 2px solid #2fd2ff;
@@ -689,8 +724,8 @@ dialog button:focus-visible{
     outline: 0px;
 }
 dialog button:hover{
-    color: #494949;
-    background: #29aec5;
+    color: #00d9ff;
+    text-shadow: 0px 0px 10px #00d9ff;
 }
 dialog .linkProject{
     position: absolute;
@@ -708,3 +743,117 @@ dialog .linkProject{
 dialog .linkProject:focus-visible{
     outline: 0px;
 }
+
+
+
+@media (max-width: 768px) {
+    body{
+        width: 100vw;
+    }
+    .buttonMenuMobil{
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: calc(50% - 15px);
+        background: transparent;
+        border:0px;
+        height: 30px;
+        width: 30px;
+        padding: 0px;
+        margin: 0px;
+    }
+    .menuMobil{
+        
+        position: fixed;
+        width: 300px;
+        height: 80vh;
+        background: rgb(45, 17, 66);
+        top: 65px;
+        z-index: 20;
+        padding-top: 20px;
+        border-bottom-right-radius: 30px;
+        border-right: 1px solid #cf2ee9;
+        border-bottom: 1px solid #cf2ee9;
+        box-shadow: 0px 0px 10px 0px #cf2ee9;
+    }
+    .menuMobil a{
+        display: block;
+        color: #2fd2ff;
+        font-size: 3vb;
+        margin-left: 10px;
+        text-decoration: none;
+        text-shadow: 0px 0px 8px #b028c7;
+    }
+    .header{
+        width: 100vw;
+        margin: 0px;
+    }
+    .header nav a{
+        display: none;  
+    }
+    main{
+        width: 100vw;
+        margin: 0px;
+    }
+    h1{
+        text-align: center;
+    }
+    .topTitle textgrad{
+        text-align: center;
+        font-size: 20px;
+    }
+    .iconsContact p{
+        display: none;
+    }
+    .personalArticle{
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .personalArticle p{
+        width: 90%;
+    }
+    .section{
+        flex-direction: column;
+        
+    }
+    .section .divh2{
+        margin: 0px;
+        margin-bottom: 30px;
+        width: 100vw;
+    }
+    .tableTimeline{
+        padding-bottom: 10vh;
+        flex-direction: column;
+    }
+    .timeline{
+        align-self: center;
+    }
+    .time{
+        left: -90px;
+        width: 80px;
+        direction: rtl;
+    }
+    .data, .data2{
+        max-width: 280px;
+    }
+    .containerProjects{
+        margin:0px;
+        margin-top: 30px;
+        grid-gap: 50px;
+    }
+    dialog div{
+        position: relative;
+        top: 10vh;
+        left: 1vw;
+        width: 98vw;
+        height: 80vh;
+        background: var(--950);
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border: 1px solid #2fd2ff;
+        border-radius: 1vw;
+        box-shadow: 40px -40px 80px -50px #2fd2ff, -40px 40px 80px -50px #e32fff;
+    }
+  }

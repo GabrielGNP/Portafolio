@@ -29,7 +29,19 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("timeGrad").innerHTML = timeGrad;
 
     dialogSIC = document.getElementById("dialogSIC");
+    
+    let buttonMenuMobil = document.getElementById("buttonMenuMobil");
+    buttonMenuMobil.addEventListener("click", function(){
+        let menuMobil = document.getElementsByClassName("menuMobil");
+        if(menuMobil[0].style.display == "none")
+            menuMobil[0].style.display = "block";
+        else menuMobil[0].style.display = "none";
+    });
 })
+
+function closeMenu(){
+    document.getElementsByClassName("menuMobil")[0].style.display = "none";
+}
 
 function openDialog(id){
     
