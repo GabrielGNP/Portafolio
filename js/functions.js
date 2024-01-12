@@ -145,4 +145,32 @@ function changeViewProjects(tipeProjects){
     }
 }
 
+function showProjects(){
+    let projects = document.getElementById("projects");
+    let tools = document.getElementById("toolsAndUtilities");
+    let buttonProjects = document.getElementById("buttonShowProjects");
+    let buttonTools = document.getElementById("buttonShowTools")
+    buttonProjects.classList.remove("unchecked");
+    buttonProjects.classList.add("checked");
+    buttonTools.classList.add("unchecked");
+    buttonTools.classList.remove("checked");
+    projects.classList.add("show");
+    projects.classList.remove("hide");
+    tools.classList.add("hide");
+    tools.classList.remove("show");
+}
+function showTools(){
+    let projects = document.getElementById("projects");
+    let tools = document.getElementById("toolsAndUtilities");
+    let buttonProjects = document.getElementById("buttonShowProjects");
+    let buttonTools = document.getElementById("buttonShowTools")
+    buttonTools.classList.remove("unchecked");
+    buttonTools.classList.add("checked");
+    buttonProjects.classList.add("unchecked");
+    buttonProjects.classList.remove("checked");
+    projects.classList.add("hide");
+    projects.classList.remove("show");
+    tools.classList.add("show");
+    tools.classList.remove("hide");
+}
 

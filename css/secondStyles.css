@@ -155,12 +155,37 @@ textGrad{
     min-width: 170px;
     box-shadow: 0px 0px 15px 0px #2fd2ff;
     text-shadow: 1px 1px 10px #e32fff;
+    /*width: 240px;*/
+    min-width: 190px;
+    max-width: 190px;
+    flex-direction: column;
+    display: flex;
 }
 .divh2 h2{
     position: sticky;
     top: 75px;
 }
-
+.titleOption{
+    background: transparent; 
+    border: 0px; 
+    color: inherit; 
+    font-size: inherit; 
+    text-shadow: inherit;
+}
+.titleOption.checked{
+    color: inherit; 
+}
+.titleOption.checked#buttonShowTools{
+   
+}
+.titleOption.unchecked{
+    color: #631870; 
+    text-shadow: none;
+    font-weight: 900;
+}
+.titleOption.unchecked#buttonShowTools{
+    
+}
 .personalArticle{
     display: flex;
     justify-content: space-between;
@@ -744,7 +769,72 @@ dialog .linkProject:focus-visible{
     outline: 0px;
 }
 
-
+.hide{
+    display: none;
+}
+.show{
+    display: initial;
+}
+.infoTools{
+    background: var(--950);
+    padding: 20px;
+    border: 1px solid #e32fff;
+    border-radius: 10px;
+    width: 96%;
+    text-wrap: pretty;
+    box-shadow: 0px 0px 20px #e32fff;
+    text-align: center;
+}
+.articleTool{
+    width: 94%;
+    margin: 3%;
+    border-radius: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.articleTool:nth-child(odd){
+    border: 2px solid #2fd2ff;
+    box-shadow: 0px 0px 20px #2fd2ff;
+}
+.articleTool:nth-child(even){
+    border: 2px solid #e32fff;
+    box-shadow: 0px 0px 20px #e32fff;
+}
+.articleTool h3{
+    text-align: center;
+    border-radius: 10px;
+    margin: 5px;
+    
+}
+.articleTool:nth-child(odd) h3{
+    color: #e32fff;
+    text-shadow: 1px 1px 10px #e32fff;
+    border: 2px solid #2fd2ff;
+    box-shadow: 5px 5px 15px -5px #2fd2ff;
+}
+.articleTool:nth-child(even) h3{
+    color: #2fd2ff;
+    text-shadow: 1px 1px 10px #2fd2ff;
+    border: 2px solid #e32fff;
+    box-shadow: 5px 5px 15px -5px #e32fff;
+}
+.contentArticleTool{
+    width: 96%;
+    height: 100%;
+    margin: 2%;
+}
+.imgToolContainer{
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 0px 0px 10px 0px grey;
+    border-radius: 5px;
+}
+.imgToolContainer img{
+    width: 100%;
+    border-radius: 5px;
+}
 
 @media (max-width: 768px) {
     body{
@@ -821,6 +911,9 @@ dialog .linkProject:focus-visible{
         margin: 0px;
         margin-bottom: 30px;
         width: 100vw;
+        flex-direction: row;
+        max-width: none;
+        min-width: none;
     }
     .tableTimeline{
         padding-bottom: 10vh;
@@ -857,3 +950,5 @@ dialog .linkProject:focus-visible{
         box-shadow: 40px -40px 80px -50px #2fd2ff, -40px 40px 80px -50px #e32fff;
     }
   }
+
+  
