@@ -175,16 +175,10 @@ textGrad{
 .titleOption.checked{
     color: inherit; 
 }
-.titleOption.checked#buttonShowTools{
-   
-}
 .titleOption.unchecked{
     color: #631870; 
     text-shadow: none;
     font-weight: 900;
-}
-.titleOption.unchecked#buttonShowTools{
-    
 }
 .personalArticle{
     display: flex;
@@ -835,6 +829,15 @@ dialog .linkProject:focus-visible{
     width: 100%;
     border-radius: 5px;
 }
+
+.articleTool:nth-child(even) .contentArticleTool .description a{
+    color: #2fd2ff;
+}
+.articleTool:nth-child(odd) .contentArticleTool .description a{
+    color: #e32fff;
+}
+
+
 
 @media (max-width: 768px) {
     body{

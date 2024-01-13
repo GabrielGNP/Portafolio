@@ -58,8 +58,8 @@
                 </span>
             </article>
             <article class="personalArticle">
-                <p>Hola, tengo <textgrad id="yearsOld">24</textgrad> años y soy un graduado en la carrera de Analisis de Sistemas. Me dedico al desarrollo del software desde que terminé la universidad, hace aproximadamente <textgrad id="timeGrad">más de un año</textgrad>. <br>El desarrollo de software es algo que me gusta mucho, sobre todo la programación, así que es habitual que esté escribiendo código.</p>
-                <p>Desde que terminé la universidad me he dedicado a aprender diferentes tecnologías, algunas por curiosidad y otras por necesidad al tener que realizar un trabajo. He aprendido sobre desarrollo mobil, aplicaciones web (front y back), APIs, desarrollo de aplicaciones de escritorio y un poco sobre desarrollo de juegos.</p>    
+                <p>Hola, tengo <textgrad id="yearsOld">24</textgrad> años y soy un graduado en la carrera de Analisis de Sistemas. Me dedico al desarrollo del software desde que terminé la universidad, hace <textgrad id="timeGrad">más de un año</textgrad>. <br>El desarrollo de software es algo que me gusta mucho, sobre todo la programación, así que es habitual que esté escribiendo código.</p>
+                <p>Desde que terminé la universidad me he dedicado a aprender diferentes tecnologías, algunas por curiosidad y otras por necesidad al tener que realizar un trabajo. He aprendido sobre desarrollo mobil, aplicaciones web (front y back), APIs, desarrollo de aplicaciones Desktop y un poco sobre desarrollo de juegos.</p>    
             </article>
         </section>
         <section id="Exp" class="section">
@@ -290,10 +290,10 @@
 
         <section id="Pro" class="section">
             <div class="divh2">
-                <button class="titleOption unchecked" id="buttonShowProjects" onclick="showProjects();"><h2>Proyectos</h2></button>
-                <button class="titleOption checked" id="buttonShowTools" onclick="showTools();"><h2>Herramientas</h2></button>
+                <button class="titleOption checked" id="buttonShowProjects" onclick="showProjects();"><h2>Proyectos</h2></button>
+                <button class="titleOption unchecked" id="buttonShowTools" onclick="showTools();"><h2>Herramientas</h2></button>
             </div>
-            <section id="projects" class="hide" style="width: 100%;">
+            <section id="projects" class="show" style="width: 100%;">
                 <nav id="navProjects" class="navProjects">
                     <div class="contentButton"><button class="active" onclick="changeViewProjects('Todo')">Todo</button></div>
                     <div class="contentButton"><button onclick="changeViewProjects('Web')">Web</button></div>
@@ -497,23 +497,75 @@
                     
                 </section>
             </section>
-            <section id="toolsAndUtilities" class="show" style="width: 100%;">
+            <section id="toolsAndUtilities" class="hide" style="width: 100%;">
                 <section style="width: 100%; display: flex; justify-content: center;">
-                    <p class="infoTools">Herramientas utilizadas en mis distintos desarrollos, ninguna de estas herramientas ha sido desarrollada por mi sin embargo me han sido de mucha utilidad para mejorar mis proyectos, facilitar y acelerar el desarrollo.</p>
+                    <p class="infoTools">Herramientas utilizadas en mis distintos desarrollos. Ninguna de estas herramientas ha sido desarrollada por mí; sin embargo, me han sido de mucha utilidad para optimizar, facilitar y agilizar el desarrollo de mis proyectos.</p>
                 </section>
                 <section>
+                    <article class="articleTool">
+                        <h3>codi.link</h3>
+                        <div class="contentArticleTool">
+                            <div class="imgToolContainer">
+                                <img src="img/tools/codi.link.png" alt="">
+                            </div>
+                            <div class="description">
+                                <p>Web para escribir código HTML, CSS y JavaScript donde los cambios son visibles casi de forma inmediata.</p>
+                                <p>Es de gran utilidad cuando queremos probar la visibilidad de un código o una funcionalidad sin necesidad de tener que actualizar la página al hacer los cambios.</p>
+                                <p>➡️ <a href="https://codi.link/%7C%7C" target="_blank" rel="noopener noreferrer">codi.link</a> ___ Desarrollado por <a href="https://twitter.com/midudev" target="_blank" rel="noopener noreferrer">@midudev</a></p>
+                            </div>
+                        </div>
+                    </article>
                     <article class="articleTool">
                         <h3>UI Color</h3>
                         <div class="contentArticleTool">
                             <div class="imgToolContainer">
                                 <img src="img/tools/UI Colors.png" alt="">
                             </div>
-                            <div class="description"></div>
+                            <div class="description">
+                                <p>Web Generadora de colores.</p>
+                                <p>Utilizada para obtener una paleta de un color en distintas tonalidades y crear las UI con una mejor selección de colores.</p>
+                                <p>➡️ <a href="https://uicolors.app/create" target="_blank" rel="noopener noreferrer">UI Color</a> ___ Desarrollado por <a href="https://twitter.com/erikdevries_nl" target="_blank" rel="noopener noreferrer">@erikdevries_nl</a></p>
+                            </div>
                         </div>
                     </article>
                     <article class="articleTool">
-                        <h3>Tool 2 utilidad extrema para la utilizacion de la creación de nuevas utilidades</h3>
-                        <div class="contentArticleTool"></div>
+                        <h3>FontAwesome</h3>
+                        <div class="contentArticleTool">
+                            <div class="imgToolContainer">
+                                <img src="img/tools/FontAwesome.png" alt="">
+                            </div>
+                            <div class="description">
+                                <p>Librería de iconos.</p>
+                                <p>Ofrece una gran cantidad de iconos para los proyectos. No todos son free, pero la cantidad de iconos que ofrece es de gran utilidad. </p>
+                                <p>➡️ <a href="https://fontawesome.com/" target="_blank" rel="noopener noreferrer">FontAwesome</a> ___ Desarrollado por <a href="https://twitter.com/fontawesome/" target="_blank" rel="noopener noreferrer">FontAwesome</a></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="articleTool">
+                        <h3>tabler icons</h3>
+                        <div class="contentArticleTool">
+                            <div class="imgToolContainer">
+                                <img src="img/tools/tabler_icons.png" alt="">
+                            </div>
+                            <div class="description">
+                                <p>Librería de iconos.</p>
+                                <p>Ofrece una gran cantidad de iconos gratis y de código abierto para los proyectos.</p>
+                                <p>➡️ <a href="https://tabler.io/icons" target="_blank" rel="noopener noreferrer">tabler icon</a> ___ Desarrollado por <a href="https://twitter.com/codecalm" target="_blank" rel="noopener noreferrer">@codecalm</a></p>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="articleTool">
+                        <h3>ICONS</h3>
+                        <div class="contentArticleTool">
+                            <div class="imgToolContainer">
+                                <img src="img/tools/iconos8.png" alt="">
+                            </div>
+                            <div class="description">
+                                <p>Repositorio de iconos.</p>
+                                <p>Ofrece una enorme cantidad de iconos free para los proyectos.</p>
+                                <p>➡️ <a href="https://iconos8.es/icons" target="_blank" rel="noopener noreferrer">ICONS</a> ___ Desarrollado por <a href="https://iconos8.es/about" target="_blank" rel="noopener noreferrer">icons8</a></p>
+                            </div>
+                        </div>
                     </article>
                 </section>
             </section>
