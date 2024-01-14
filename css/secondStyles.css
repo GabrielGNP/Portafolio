@@ -171,6 +171,11 @@ textGrad{
     color: inherit; 
     font-size: inherit; 
     text-shadow: inherit;
+    position: sticky;
+    top: 70px;
+}
+.titleOption:nth-child(2){
+    top: 140px;
 }
 .titleOption.checked{
     color: inherit; 
@@ -909,6 +914,11 @@ dialog .linkProject:focus-visible{
     .section{
         flex-direction: column;
         
+    }
+    .divh2{
+        width: 100vw;
+        max-width: none;
+        min-width: none;
     }
     .section .divh2{
         margin: 0px;
