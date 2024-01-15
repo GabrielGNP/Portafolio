@@ -469,7 +469,8 @@ textGrad{
 .containerProjects{
     width: 100%; 
     height: 100%;
-    margin: 30px;
+    /*margin: 30px;*/
+    margin-top: 30px;
     /*display: flex;
     flex-flow: wrap;
     justify-content: center;*/
@@ -517,7 +518,7 @@ textGrad{
 }
 .project .image{
     background: rgb(61, 54, 54);
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     height: 222px;
     text-align-last: center;
     position: relative;
@@ -529,7 +530,9 @@ textGrad{
     height: 608px;
 }
 .project .image .imgH{
-    height: 200px;
+    /*height: 200px;*/
+    width: 95%;
+    height: 95%;
 }
 .project .image .imgW{
     width: 95%;
@@ -630,12 +633,14 @@ textGrad{
     grid-row: span 2;
 }
 .project.Mobil .img{
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     height: 550px;
     text-align-last: center;
 }
 .project.Mobil .image .img{
     height: 550px;
+    width: 98%;
+    height: 95%;
 }
 .project.Mobil .image .icon{
     position: absolute;
