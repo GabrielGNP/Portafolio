@@ -1,7 +1,8 @@
 :root{
     --950:#262626;
     --600:#5d5d5d;
-
+    --colorCyan:#d0f5ff;
+    --colorPurple:#f6bdff;
 }
 *{
     box-sizing: border-box; 
@@ -62,8 +63,8 @@ nav a{
     transition: 0.2s;
 }
 nav a:hover{
-    color: var(#2fd2ff);
-    background: linear-gradient(90deg, #e32fff, #2fd2ff);
+    color: var(--colorCyan);
+    background: linear-gradient(90deg, var(--colorPurple), var(--colorCyan));
     -webkit-text-fill-color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
@@ -75,8 +76,8 @@ nav a:hover{
     display: none;
 }
 main{
-    margin-right: 10vw;
-    margin-left: 10vw;
+    margin-right: 5vw;
+    margin-left: 5vw;
 }
 h1{
     font-size: 60px;
@@ -90,7 +91,7 @@ h1{
 h3{
     color: #2fd2ff;
     background: var(--950);
-    border-left: 2px solid #e32fff;
+    border: 1px solid var(--colorPurple);
     padding: 5px;
     padding-left: 15px;
     padding-right: 15px;
@@ -98,12 +99,14 @@ h3{
     width: fit-content;
     margin: 0px;
     margin-bottom: 25px;
-    box-shadow: 5px 5px 15px -5px #e32fff;
-    text-shadow: 1px 1px 10px #2fd2ff;
+    box-shadow: 0px 0px 15px 0px #e32fff, 
+        inset 0px 0px 10px 0px #e32fff;
+    color: var(--colorCyan);
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe, 0px 0px 3px #2FD2FE;
 }
 textGrad{
-    color: #2fd2ff;
-    text-shadow: 1px 1px 20px #2fd2ff;
+    color: #d0f5ff;
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe;
 }
 .topTitle textgrad{
     display: block;
@@ -148,18 +151,20 @@ textGrad{
     color: #e32fff;
     background: var(--950);
     padding: 10px;
-    border-left: 5px solid #2fd2ff;
+    border: 1px solid #adedff;
     border-radius: 10px;      
     margin: 0px;
-    margin-right: 10px;
+    margin-right: 30px;
     min-width: 170px;
-    box-shadow: 0px 0px 15px 0px #2fd2ff;
+    box-shadow: 0px 0px 15px 0px #2fd2ff, inset 0px 0px 10px 0px #2fd2ff;
     text-shadow: 1px 1px 10px #e32fff;
     /*width: 240px;*/
     min-width: 190px;
     max-width: 190px;
     flex-direction: column;
     display: flex;
+    color: #f6bdff;
+    text-shadow: 0px 0px 3px #e32fff, 0px 2px 12px #e32fff, 0px -2px 12px #e32fff, 0px 0px 3px #e32fff;
 }
 .divh2 h2{
     position: sticky;
@@ -193,11 +198,12 @@ textGrad{
 .personalArticle p{
     background: var(--950);
     padding: 20px;
-    border: 1px solid #e32fff;
+    border: 1px solid #faddff;
     border-radius: 10px;
     width: 48%;
     text-wrap: pretty;
-    box-shadow: 0px 0px 20px #e32fff;
+    box-shadow: 0px 0px 20px #e32fff, 
+    inset 0px 0px 15px #e32fff;
 }
 
 .section{
@@ -446,22 +452,22 @@ textGrad{
 .navProjects .contentButton:nth-child(odd) button:hover{
     background: var(--950);
     text-shadow: 0px 0px 10px #e32fff;
-    color: #e32fff;
+    color: var(--colorPurple);
 }
 .navProjects .contentButton:nth-child(even) button:hover{
     background: var(--950);
     text-shadow: 0px 0px 10px #2fd2ff;
-    color: #2fd2ff;
+    color: var(--colorCyan);
 }
 .navProjects .contentButton:nth-child(odd) button.active{
     text-shadow: 0px 0px 10px #e32fff;
-    color: #e32fff;
+    color: var(--colorPurple);
     border-left: 2px solid #e32fff;
     box-shadow: -10px 0px 10px -10px #e32fff;
 }
 .navProjects .contentButton:nth-child(even) button.active{
     text-shadow: 0px 0px 10px #2fd2ff;
-    color: #2fd2ff;
+    color: var(--colorCyan);
     border-left: 2px solid #2fd2ff;
     box-shadow: -10px 0px 10px -10px #2fd2ff;
 }
@@ -469,7 +475,8 @@ textGrad{
 .containerProjects{
     width: 100%; 
     height: 100%;
-    margin: 30px;
+    /*margin: 30px;*/
+    margin-top: 30px;
     /*display: flex;
     flex-flow: wrap;
     justify-content: center;*/
@@ -492,18 +499,19 @@ textGrad{
     margin-left: 50px;
     margin-right: 50px;
     border-radius: 20px;
-    border: 1px solid #2fd2ff;
-    box-shadow: 0px 0px 100px -60px #2fd2ff;
+    border: 1px solid var(--colorCyan);
+    box-shadow: 0px 0px 10px 0px #2fd2ff, inset 0px 0px 10px 0px #2fd2ff;
 }
 .project:nth-child(even){
-    border: 1px solid #e32fff;
-    box-shadow: 0px 0px 100px -60px #e32fff;
+    border: 1px solid var(--colorPurple);
+    box-shadow: 0px 0px 10px 0px #e32fff, inset 0px 0px 10px 0px #e32fff;
 }
 .project .title{
     width: 100%;
     text-align: center;
-    background: #29c0ea;
-    color: #000;
+    background: #262626;
+    color: var(--colorCyan);
+    text-shadow: 0px 0px 10px #2fd2ff;
     height: 50px;
     font-size: 20px;
     font-weight: 600;
@@ -517,7 +525,7 @@ textGrad{
 }
 .project .image{
     background: rgb(61, 54, 54);
-    padding-top: 10px;
+    /*padding-top: 10px;*/
     height: 222px;
     text-align-last: center;
     position: relative;
@@ -529,7 +537,9 @@ textGrad{
     height: 608px;
 }
 .project .image .imgH{
-    height: 200px;
+    /*height: 200px;*/
+    width: 95%;
+    height: 95%;
 }
 .project .image .imgW{
     width: 95%;
@@ -562,8 +572,9 @@ textGrad{
 .project:nth-child(even) .title{
     width: 100%;
     text-align: center;
-    background: #bf29d6;
-    color: #000;
+    background: #262626;
+    color: var(--colorPurple);
+    text-shadow: 0px 0px 10px #e32fff;
     height: 50px;
     font-size: 20px;
     font-weight: 600;
@@ -610,32 +621,36 @@ textGrad{
 }
 .project:hover .tecs{
     left: -60px;
-    box-shadow: 0px 0px 10px 0px #2fd2ff;
-    border: 1px solid #2fd2ff;
+    box-shadow: 0px 0px 10px 0px #2fd2ff, inset 0px 0px 5px 0px #2fd2ff;
+    border: 1px solid var(--colorCyan);
 }
 .project:nth-child(even):hover .tecs{
     left: -60px;
-    box-shadow: 0px 0px 10px 0px #e32fff;
-    border: 1px solid #e32fff;
+    box-shadow: 0px 0px 10px 0px #e32fff, inset 0px 0px 5px 0px #e32fff;
+    border: 1px solid var(--colorPurple);
 }
 .iconTech{
-    color:#2fd2ff;
+    color:var(--colorCyan);
+    filter: drop-shadow(0 0 10px #2fd2ff);
     margin-top: 5px;
 }
 .project:nth-child(even) .iconTech{
-    color:#e32fff;
+    color:var(--colorPurple);
+    filter: drop-shadow(0 0 10px #e32fff);
 }
 .project.Mobil{
     height: 660px;
     grid-row: span 2;
 }
 .project.Mobil .img{
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     height: 550px;
     text-align-last: center;
 }
 .project.Mobil .image .img{
     height: 550px;
+    width: 98%;
+    height: 95%;
 }
 .project.Mobil .image .icon{
     position: absolute;
@@ -646,24 +661,24 @@ textGrad{
     background-color: var(--950);
     border-radius: 30%;
     padding: 10px;
-    border: 2px solid #2fd2ff;
-    box-shadow: 0px 0px 10px 0px #2fd2ff;
+    border: 1px solid var(--colorCyan);
+    box-shadow: 0px 0px 10px 0px #2fd2ff, inset 0px 0px 5px 0px #2fd2ff;
 }
 .project:nth-child(even).Mobil .image .icon{
-    border: 2px solid #e32fff;
-    box-shadow: 0px 0px 10px 0px #e32fff;
+    border: 1px solid var(--colorPurple);
+    box-shadow: 0px 0px 10px 0px #e32fff, inset 0px 0px 5px 0px #e32fff;
 }
 .project .iconMoreInfo{
     position: absolute;
     top: 10px;
     right: 10px;
     z-index: 11;
-    color:#0f4756;
+    color:var(--colorCyan);
     height: 0px;
     transition: 0.45s;
 }
 .project:nth-child(even) .iconMoreInfo{
-    color:#4b1454;
+    color:var(--colorPurple);
 }
 .project:hover .iconMoreInfo{
     position: absolute;
@@ -701,9 +716,8 @@ dialog div{
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
-    border: 1px solid #2fd2ff;
+    border: 1px solid var(--colorCyan);
     border-radius: 1vw;
-
     box-shadow: 40px -40px 80px -50px #2fd2ff,
         -40px 40px 80px -50px #e32fff;
     
@@ -711,7 +725,7 @@ dialog div{
 dialog h1{
     margin: 0px;
     font-size: 20px;
-    color: #2fd2ff;
+    color: rgb(26, 18, 64);
     text-shadow: 2px -2px 5px #e32fff, 1px 2px 1px #2297b7;
 }
 dialog h2{
@@ -761,8 +775,9 @@ dialog .linkProject{
     padding-bottom: 10px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-bottom: 1px solid #2fd2ff;
-    color: #e32fff;
+    border-bottom: 1px solid var(--colorCyan);
+    color: var(--colorPurple);
+    text-shadow: 0 0 5px #e32fff;
 }
 dialog .linkProject:focus-visible{
     outline: 0px;
@@ -777,12 +792,14 @@ dialog .linkProject:focus-visible{
 .infoTools{
     background: var(--950);
     padding: 20px;
-    border: 1px solid #e32fff;
+    border: 1px solid var(--colorPurple);
     border-radius: 10px;
     width: 96%;
     text-wrap: pretty;
-    box-shadow: 0px 0px 20px #e32fff;
+    box-shadow: 0px 0px 20px #e32fff, inset 0px 0px 10px #e32fff;
     text-align: center;
+    color: var(--colorCyan);
+    text-shadow: 0px 0px 10px #2fd2ff;
 }
 .articleTool{
     width: 94%;
@@ -794,12 +811,12 @@ dialog .linkProject:focus-visible{
     align-items: center;
 }
 .articleTool:nth-child(odd){
-    border: 2px solid #2fd2ff;
-    box-shadow: 0px 0px 20px #2fd2ff;
+    border: 1px solid var(--colorCyan);
+    box-shadow: 0px 0px 15px #2fd2ff, inset 0px 0px 10px #2fd2ff;
 }
 .articleTool:nth-child(even){
-    border: 2px solid #e32fff;
-    box-shadow: 0px 0px 20px #e32fff;
+    border: 1px solid var(--colorPurple);
+    box-shadow: 0px 0px 15px #e32fff, inset 0px 0px 10px #e32fff;
 }
 .articleTool h3{
     text-align: center;
@@ -808,16 +825,16 @@ dialog .linkProject:focus-visible{
     
 }
 .articleTool:nth-child(odd) h3{
-    color: #e32fff;
+    color: #f5b2ff;
     text-shadow: 1px 1px 10px #e32fff;
-    border: 2px solid #2fd2ff;
-    box-shadow: 5px 5px 15px -5px #2fd2ff;
+    border: 1px solid var(--colorCyan);
+    box-shadow: 0px 0px 15px #2fd2ff, inset 0px 0px 10px #2fd2ff;
 }
 .articleTool:nth-child(even) h3{
-    color: #2fd2ff;
+    color: #adedff;
     text-shadow: 1px 1px 10px #2fd2ff;
-    border: 2px solid #e32fff;
-    box-shadow: 5px 5px 15px -5px #e32fff;
+    border: 1px solid var(--colorPurple);
+    box-shadow: 0px 0px 15px #e32fff, inset 0px 0px 10px #e32fff;
 }
 .contentArticleTool{
     width: 96%;
@@ -958,7 +975,7 @@ dialog .linkProject:focus-visible{
         padding: 10px;
         padding-left: 20px;
         padding-right: 20px;
-        border: 1px solid #2fd2ff;
+        border: 1px solid var(--colorCyan);
         border-radius: 1vw;
         box-shadow: 40px -40px 80px -50px #2fd2ff, -40px 40px 80px -50px #e32fff;
     }
