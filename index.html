@@ -195,7 +195,7 @@
                         <p>Licenciado en sistemas de información - UADER FCyT</p>
                         <textgrad style="font-size: 15px;">2024 - en progreso</textgrad>
                     </div>
-                    <div class="card" onclick="document.getElementById('cursosView').classList.toggle('open')">
+                    <div class="card" onclick="openDataViews('cursosView')">
                         <p style="font-size: 20px;">Cursos</p>
                         <textgrad>20</textgrad>
                         <svg class="iconCard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" >
@@ -206,28 +206,28 @@
         
                 <h3>Conocimientos</h3>
                 <div class="cardContainer">
-                    <div class="card" onclick="document.getElementById('proyectCSharpView').classList.toggle('open')">
+                    <div class="card" onclick="openDataViews('proyectCSharpView')">
                         <p style="font-size: 20px;">C#</p>
                         <textgrad>2 proyectos</textgrad>
                         <svg class="iconCard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" >
                             <path fill="currentColor" d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l448 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l448 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm96 64a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm104 0c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm-72-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM96 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
                         </svg>
                     </div>
-                    <div class="card" onclick="document.getElementById('proyectFlutterView').classList.toggle('open')">
+                    <div class="card" onclick="openDataViews('proyectFlutterView')">
                         <p style="font-size: 20px;">Flutter</p>
                         <textgrad>2 proyectos</textgrad>
                         <svg class="iconCard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" >
                             <path fill="currentColor" d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l448 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l448 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm96 64a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm104 0c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm-72-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM96 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
                         </svg>
                     </div>
-                    <div class="card" onclick="document.getElementById('proyectWebView').classList.toggle('open')">
+                    <div class="card" onclick="openDataViews('proyectWebView')">
                         <p style="font-size: 20px;">Web</p>
                         <textgrad>2 proyectos</textgrad>
                         <svg class="iconCard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" >
                             <path fill="currentColor" d="M64 80c-8.8 0-16 7.2-16 16l0 320c0 8.8 7.2 16 16 16l448 0c8.8 0 16-7.2 16-16l0-320c0-8.8-7.2-16-16-16L64 80zM0 96C0 60.7 28.7 32 64 32l448 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm96 64a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm104 0c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm0 96c0-13.3 10.7-24 24-24l224 0c13.3 0 24 10.7 24 24s-10.7 24-24 24l-224 0c-13.3 0-24-10.7-24-24zm-72-64a32 32 0 1 1 0-64 32 32 0 1 1 0 64zM96 352a32 32 0 1 1 64 0 32 32 0 1 1 -64 0z"/>
                         </svg>
                     </div>
-                    <div class="card" onclick="document.getElementById('proyectNodeView').classList.toggle('open')">
+                    <div class="card" onclick="openDataViews('proyectNodeView')">
                         <p style="font-size: 20px;">Node</p>
                         <textgrad>1 proyectos</textgrad>
                         <svg class="iconCard" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" >
@@ -269,7 +269,7 @@
                         <p>Descripción de los conceptos básicos de la ciberseguridad (Microsoft)</p>
                     </div>
 
-                    <button id="closeViewCursos" onclick="document.getElementById('cursosView').classList.remove('open')">cerrar</button>
+                    <button id="closeViewCursos" onclick="closeDataViews()">cerrar</button>
                 </div>
 
                 <div class="containerViewDataEstCon" id="proyectCSharpView">
@@ -277,7 +277,7 @@
                         <p>Sistema Gestor de Productos</p>
                         <p>Proyecto SIC (Sistem Inputs Controller)</p>
                     </div>
-                    <button id="closeViewCursos" onclick="document.getElementById('proyectCSharpView').classList.toggle('open')">cerrar</button>
+                    <button id="closeViewCursos" onclick="closeDataViews()">cerrar</button>
                 </div>
                 
                 <div class="containerViewDataEstCon" id="proyectFlutterView">
@@ -285,7 +285,7 @@
                         <p>Arrecife Mobil</p>
                         <p>Archery Statistics</p>
                     </div>
-                    <button id="closeViewCursos" onclick="document.getElementById('proyectFlutterView').classList.toggle('open')">cerrar</button>
+                    <button id="closeViewCursos" onclick="closeDataViews()">cerrar</button>
                 </div>
 
                 <div class="containerViewDataEstCon" id="proyectWebView">
@@ -293,14 +293,14 @@
                         <p>BiblioCode</p>
                         <p>Torre de Hanoi</p>
                     </div>
-                    <button id="closeViewCursos" onclick="document.getElementById('proyectWebView').classList.toggle('open')">cerrar</button>
+                    <button id="closeViewCursos" onclick="closeDataViews()">cerrar</button>
                 </div>
 
                 <div class="containerViewDataEstCon" id="proyectNodeView">
                     <div class="viewDataEstCon">
                         <p>Torre de Hanoi</p>
                     </div>
-                    <button id="closeViewCursos" onclick="document.getElementById('proyectNodeView').classList.toggle('open')">cerrar</button>
+                    <button id="closeViewCursos" onclick="closeDataViews()">cerrar</button>
                 </div>
             </section>            
         </section>

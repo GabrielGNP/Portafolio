@@ -174,3 +174,57 @@ function showTools(){
     tools.classList.remove("hide");
 }
 
+function openDataViews(viewID){
+    switch (viewID) {
+        case "cursosView":
+            document.getElementById('cursosView').classList.add('open')
+            document.getElementById('proyectCSharpView').classList.remove('open')
+            document.getElementById('proyectFlutterView').classList.remove('open')
+            document.getElementById('proyectWebView').classList.remove('open')
+            document.getElementById('proyectNodeView').classList.remove('open')
+            break;
+        case "proyectCSharpView":
+            document.getElementById('cursosView').classList.remove('open')
+            document.getElementById('proyectCSharpView').classList.add('open')
+            document.getElementById('proyectFlutterView').classList.remove('open')
+            document.getElementById('proyectWebView').classList.remove('open')
+            document.getElementById('proyectNodeView').classList.remove('open')
+            break;
+        case "proyectFlutterView":
+            document.getElementById('cursosView').classList.remove('open')
+            document.getElementById('proyectCSharpView').classList.remove('open')
+            document.getElementById('proyectFlutterView').classList.add('open')
+            document.getElementById('proyectWebView').classList.remove('open')
+            document.getElementById('proyectNodeView').classList.remove('open')
+            break;
+        case "proyectWebView":
+            document.getElementById('cursosView').classList.remove('open')
+            document.getElementById('proyectCSharpView').classList.remove('open')
+            document.getElementById('proyectFlutterView').classList.remove('open')
+            document.getElementById('proyectWebView').classList.add('open')
+            document.getElementById('proyectNodeView').classList.remove('open')
+            break;
+        case "proyectNodeView":
+            document.getElementById('cursosView').classList.remove('open')
+            document.getElementById('proyectCSharpView').classList.remove('open')
+            document.getElementById('proyectFlutterView').classList.remove('open')
+            document.getElementById('proyectWebView').classList.remove('open')
+            document.getElementById('proyectNodeView').classList.add('open')
+            break;
+        default:
+            document.getElementById('cursosView').classList.remove('open')
+            document.getElementById('proyectCSharpView').classList.remove('open')
+            document.getElementById('proyectFlutterView').classList.remove('open')
+            document.getElementById('proyectWebView').classList.remove('open')
+            document.getElementById('proyectNodeView').classList.remove('open')
+            break;
+    }
+}
+function closeDataViews(){
+    document.getElementById('cursosView').classList.remove('open')
+    document.getElementById('proyectCSharpView').classList.remove('open')
+    document.getElementById('proyectFlutterView').classList.remove('open')
+    document.getElementById('proyectWebView').classList.remove('open')
+    document.getElementById('proyectNodeView').classList.remove('open')
+    
+}
