@@ -111,6 +111,8 @@ textGrad{
 .topTitle textgrad{
     display: block;
     font-size: 25px;
+    color: #d0f5ff;
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe;
 }
 
 .iconsContact{
@@ -136,15 +138,16 @@ textGrad{
 }
 .iconContact{
     position: relative;
-    color: #2fd2ff;
+    color: #adedff;
+    filter: drop-shadow(0 0 10px #2fd2ff);
+    transition: 0.5s;
 }
 .iconContact:hover{
     position: absolute;
     height: 45px;
     width: 45px;
-    transition: 0.2s;
-    color: #e32fff;
-
+    color: #f6bdff;
+    filter: drop-shadow(0 0 10px #e32fff);
 }
 
 .divh2{
@@ -409,6 +412,171 @@ textGrad{
     margin: 0px;
 }
 
+.cardContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.card{
+    position: relative;
+    height: 100px;
+    width: 250px;
+    border: 1px solid #6e6e6e;
+
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    color: #6e6e6e;
+    
+    transition: 0.3s;
+}
+.card:hover{
+    border: 1px solid #adedff;
+    box-shadow: 0px 0px 10px 0px #2fd2ff, inset 0px 0px 5px #2fd2ff;
+    color: #d0f5ff;
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe;
+    
+}
+.card:hover:nth-child(even){
+    border: 1px solid #f6bdff;
+    box-shadow: 0px 0px 10px 0px #e32fff, inset 0px 0px 5px #e32fff;
+    color: #f6bdff;
+    text-shadow: 0px 0px 3px #e32fff, 0px 2px 12px #e32fff, 0px -2px 12px #e32fff;
+}
+.card p{
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+.card textgrad{
+    font-size: 25px;
+    color: #6e6e6e;
+    text-shadow: 0px 0px 0px transparent,0px 0px 0px transparent,0px 0px 0px transparent;
+    transition: 0.5;
+}
+.card:hover textgrad{
+    color: #f6bdff;
+    text-shadow: 0px 0px 3px #e32fff, 0px 2px 12px #e32fff, 0px -2px 12px #e32fff;
+}
+.card:hover:nth-child(even) textgrad{
+    color: #d0f5ff;
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe;
+}
+.card .iconCard{
+    width: 30px; 
+    position:absolute; 
+    right:5px; 
+    bottom:5px;
+    color: #6e6e6e;
+    filter: drop-shadow(0 0 10px transparent);
+    transition: translate 0.5s;
+}
+.card:hover .iconCard{
+    translate: 0px -5px;
+    color: #d0f5ff;
+    filter: drop-shadow(0 0 10px #2FD2FE);
+}
+.card:hover:nth-child(even) .iconCard{
+    color: #f6bdff;
+    filter: drop-shadow(0 0 10px #e32fff);
+}
+
+.containerViewDataEstCon{
+    background: #d0f5ff;
+    box-shadow: -10px 0px 10px -10px #2fd2ff, 
+        -5px 10px 5px -10px #2fd2ff, 
+        -5px -10px 5px -10px #2fd2ff,
+        5px 10px 5px -10px #156278, 
+        5px -10px 5px -10px #16657b;
+    width: 0px;
+    height: 80%;
+    position: fixed;
+    right: 0vw;
+    top: 13vh;
+    transition: 1s;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 15;
+}
+.containerViewDataEstCon.open{
+    width: 350px;
+}
+.viewDataEstCon{
+    background: linear-gradient(90deg, transparent, #18181b 1%);
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    right: 0px;
+    top: 0%;
+    overflow: hidden;
+    padding: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.containerViewDataEstCon.open .viewDataEstCon{
+    overflow-y: auto;
+}
+#closeViewCursos{
+    position: absolute;
+    bottom: 0px;
+    height: 40px;
+    width: 95.4%;
+    left: 4px;
+    background: linear-gradient(180deg, transparent, #18181b);
+    border: 0px;
+    font-size: 20px;
+    color: #d0f5ff;
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe;
+}
+
+.viewDataEstCon p, .viewDataEstCon details{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: grey;
+    text-align: end;
+}
+.viewDataEstCon p:hover, .viewDataEstCon details:hover{
+    color: #d0f5ff;
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe;
+}
+.viewDataEstCon p:nth-child(even):hover, 
+.viewDataEstCon details:nth-child(even):hover{
+    color: #f6bdff;
+    text-shadow: 0px 0px 3px #e32fff, 0px 2px 12px #e32fff, 0px -2px 12px #e32fff;
+}
+.viewDataEstCon details{
+    border: none;
+    transition: 1s;
+    border-radius: 15px;
+    padding: 5px;
+    padding-bottom: 0px;
+}
+.viewDataEstCon details[open]{
+    border: 1px solid #d0f5ff;
+    border-radius: 15px;
+    padding-right: 5px;
+    color: #d0f5ff;
+    text-shadow: 0px 0px 3px #2FD2FE, 0px 2px 12px #2FD2FE, 0px -2px 12px #2fd2fe;
+}
+.viewDataEstCon details[open]:nth-child(even){
+    border: 1px solid #f6bdff;
+    color: #f6bdff;
+    text-shadow: 0px 0px 3px #e32fff, 0px 2px 12px #e32fff, 0px -2px 12px #e32fff;
+}
+.viewDataEstCon details p{
+    padding-bottom: 15px;
+    padding-right: 15px;
+    text-shadow: none;
+    color: grey;
+    margin: 0px;
+    margin-top: 10px;
+}
 
 .navProjects{
     width: 100%;
@@ -485,7 +653,7 @@ textGrad{
     grid-template-rows: repeat(auto-fill, minmax(300px, 1fr)); /* Define el ancho de las columnas */
     grid-auto-rows: 300px; /* Define la altura de las filas */
     grid-auto-flow: dense; /* Permite reorganizar automáticamente los elementos */
-    grid-gap: 30px;
+    grid-gap: 35px;
     align-items: center;
     justify-items: center;
 }
@@ -801,9 +969,15 @@ dialog .linkProject:focus-visible{
     color: var(--colorCyan);
     text-shadow: 0px 0px 10px #2fd2ff;
 }
+.containerArticleTool{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .articleTool{
-    width: 94%;
+    width: 40%;
     margin: 3%;
+    padding: 5px;
     border-radius: 15px;
     
     display: flex;
@@ -960,6 +1134,9 @@ dialog .linkProject:focus-visible{
     .data, .data2{
         max-width: 280px;
     }
+    .cardContainer{
+        justify-content: center;
+    }
     .containerProjects{
         margin:0px;
         margin-top: 30px;
@@ -978,6 +1155,9 @@ dialog .linkProject:focus-visible{
         border: 1px solid var(--colorCyan);
         border-radius: 1vw;
         box-shadow: 40px -40px 80px -50px #2fd2ff, -40px 40px 80px -50px #e32fff;
+    }
+    .articleTool{
+        width: 80%;
     }
   }
 
