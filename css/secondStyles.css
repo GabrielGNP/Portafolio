@@ -83,7 +83,8 @@ h1{
     font-size: 60px;
     font-family: cursive;
     font-style: italic;
-    color: rgb(26, 18, 64);
+    /* color: rgb(26, 18, 64); */
+    color:#e0dfff;
     text-shadow: 0px -3px 5px #e32fff,0px 3px 1px #2fd2ff;
 }
 
@@ -268,11 +269,13 @@ textGrad{
 .activeJob:nth-child(odd) .title::marker{
     color: #e32fff;
 }
-.activeJob .iconJob{
+.iconJob{
     position: absolute;
     top: 0px;
     left: -15px;
     border-radius: 70px;
+}
+.activeJob .iconJob{
     border: 1px solid #2fd2ff;
 }
 .activeJob:nth-child(odd) .iconJob{
@@ -306,9 +309,9 @@ textGrad{
     background: #e32fff54;
     box-shadow: 0px 0px 30px 0px #e32fff54;
 }
-.inactiveJob:nth-child(odd) .containerIconsTechs{
-    background: #e32fff54;
-    box-shadow: 0px 0px 30px 0px #e32fff54;
+.inactiveJob .containerIconsTechs{
+    background: #ffffff54;
+    box-shadow: 0px 0px 30px 0px #ffffff54;
 }
 .inactiveJob{    
     margin-left: 50px;
@@ -802,6 +805,9 @@ textGrad{
     filter: drop-shadow(0 0 10px #2fd2ff);
     margin-top: 5px;
 }
+.inactiveJob .containerIconsTechs .iconTech{
+    filter: none
+}
 .project:nth-child(even) .iconTech{
     color:var(--colorPurple);
     filter: drop-shadow(0 0 10px #e32fff);
@@ -874,12 +880,12 @@ dialog{
 dialog::backdrop{
     background: rgba(0, 0, 0, 0.6);
 }
-dialog div{
+dialog .divDialog{
     position: relative;
-    top: calc(50vh - 25vh);
-    left: calc(50vh - 40vh);
+    top: calc(50vh - 30vh);
+    left: calc(50vw - 40vw);
     width: 80vw;
-    height: 50vh;
+    height: 60vh;
     background: var(--950);
     padding: 10px;
     padding-left: 20px;
@@ -892,18 +898,26 @@ dialog div{
 }
 dialog h1{
     margin: 0px;
-    font-size: 20px;
-    color: rgb(26, 18, 64);
+    font-size: 30px;
+    color: #e0dfff;
     text-shadow: 2px -2px 5px #e32fff, 1px 2px 1px #2297b7;
 }
 dialog h2{
-    color: rgb(198, 198, 198);
+    color: #e9e9e9;
     font-size: 16px;
     margin: 5px;
     text-decoration: underline;
 }
+dialog .info-project-dialog{
+    max-height: 55%; 
+    margin-bottom: 30px;
+    overflow-y: auto;
+    border: 1px solid #2297b7;
+    padding: 5px;
+    border-radius: 20px;
+}
 dialog p{
-    color: rgb(147, 147, 147);
+    color: #bcbcbc;
     font-size: 15px;
     
 }
@@ -934,21 +948,45 @@ dialog button:hover{
     text-shadow: 0px 0px 10px #00d9ff;
 }
 dialog .linkProject{
+    font-size: 18px;
     position: absolute;
-    bottom: -31px;
-    left: 20px;
-    background: #1d1d1d;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
+    bottom: 0px;
+    left: calc(50% - 100px);
+    width: 200px;
+    /* background: #1d1d1d; */
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+    /* padding-bottom: 10px; */
+    border-radius: 20px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    border-bottom: 1px solid var(--colorCyan);
+    /* border: 0.1px solid var(--colorCyan); */
     color: var(--colorPurple);
     text-shadow: 0 0 5px #e32fff;
+    padding: 5px;
+    text-align: center;
+}
+dialog .linkProject:hover{
+    box-shadow: 0 0 5px 1px #2fd2ff, inset 0 0 5px 1px #2fd2ff;
 }
 dialog .linkProject:focus-visible{
     outline: 0px;
+}
+dialog .containerTechnologies{
+    /* margin-top: 50px; */
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+dialog .containerTechnologies .containerTech{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+dialog .containerTechnologies .containerTech .nameTech{
+    margin: 0px; 
+    text-align: center;
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .hide{
