@@ -10,9 +10,14 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-wrap: balance;
 }
+
+
+
+
+
 html{
-    scroll-behavior: smooth;
     background: #18181b;
+    scroll-behavior: smooth;
 }
 body{
     background: linear-gradient(90deg,#18181b,#18181b,#262626,#18181b,#18181b);
@@ -23,19 +28,28 @@ body{
     place-items: center;
     margin: 0px;
     padding: 0px;
+   
+}
+.no-scroll{
+    position: fixed;
+    width: 100%;
+    overflow-y: scroll;
+}
+.scroll-no-smooth{
+    scroll-behavior: auto;
 }
 .header{
-    background: linear-gradient(90deg,#e32fff,#2fd2ff);
+    background: linear-gradient(90deg, #e32fff, #2fd2ff);
     padding: 2px;
-    box-shadow: -40vw 1px 50px 4px #e32fff9c,
-    40vw 1px 50px 4px #2fd2ff89;
-    max-height: 67px;
-    width: 100%;
+    box-shadow: -40vw 1px 50px 4px #e32fff9c, 40vw 1px 50px 4px #2fd2ff89;
+    width: 96vw;
     position: sticky;
     top: 0px;
     z-index: 30;
     height: 67px;
     max-height: 67px;
+    margin-right: 10px;
+    left: 0px;
 }
 header nav{
     width: 100%;
@@ -212,13 +226,17 @@ textGrad{
 
 .section{
     display: flex;
-    min-height: 80vh;
+    min-height: 60vh;
     margin-top: 10vh;
     margin-bottom: 10vh;
     padding-top: 10vh;
     padding-bottom: 10vh;
     box-sizing: content-box; 
 }
+.section-jobs{
+    display: flex;
+}
+
 .jobCondition{
     flex:1;
 }
@@ -645,7 +663,7 @@ textGrad{
 
 .containerProjects{
     width: 100%; 
-    height: 100%;
+    /* height: 100vh; */
     /*margin: 30px;*/
     margin-top: 30px;
     /*display: flex;
@@ -894,6 +912,8 @@ dialog .divDialog{
     border-radius: 1vw;
     box-shadow: 40px -40px 80px -50px #2fd2ff,
         -40px 40px 80px -50px #e32fff;
+    display: flex;
+    flex-direction: column;
     
 }
 dialog h1{
@@ -909,13 +929,47 @@ dialog h2{
     text-decoration: underline;
 }
 dialog .info-project-dialog{
-    max-height: 55%; 
+    max-height: 60%; 
     margin-bottom: 30px;
     overflow-y: auto;
-    border: 1px solid #2297b7;
+    border: 1px solid #1d1d1d;
     padding: 5px;
     border-radius: 20px;
+    background: #1d1d1d;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
+
+/*|  Modificaciones del scrollbar*/
+/*|*/dialog .info-project-dialog::-webkit-scrollbar{
+/*|*/-webkit-appearance: none;
+/*|*/background: #141619;
+/*|*/}
+/*|*/dialog .info-project-dialog::-webkit-scrollbar:vertical {
+/*|*/    width:10px;
+/*|*/}
+
+/*|*/dialog .info-project-dialog::-webkit-scrollbar:horizontal {
+/*|*/    height: 10px;
+/*|*/}
+/*|*/
+/*|*/dialog .info-project-dialog::-webkit-scrollbar-thumb {
+/*|*/    background-color: rgb(34, 34, 34);
+/*|*/    border-radius: 20px;
+/*|*/    /*border: 2px solid #2c2c2c;*/
+/*|*/    border: 2px solid #2fd2ff;
+/*|*/    box-shadow: 0px 0px 25px 4px #2fd2ff;;
+/*|*/}
+/*|*/
+/*|*/dialog .info-project-dialog::-webkit-scrollbar-track {
+/*|*/    border-radius: 10px;  
+/*|*/}
+/*|*/dialog .info-project-dialog::-webkit-scrollbar-corner {
+/*|*/background-color: rgb(34, 34, 34);
+/*|*/border: 2px solid #2c2c2c;
+/*|*/}
+/*|_________________________________*/
+
 dialog p{
     color: #bcbcbc;
     font-size: 15px;
@@ -950,24 +1004,27 @@ dialog button:hover{
 dialog .linkProject{
     font-size: 18px;
     position: absolute;
-    bottom: 0px;
-    left: calc(50% - 100px);
-    width: 200px;
-    /* background: #1d1d1d; */
+    bottom: -32px;
+    left: calc(50% - 105px);
+    width: 210px;
+    background: #1d1d1d;
+    padding: 5px;
     /* padding-left: 10px; */
     /* padding-right: 10px; */
     /* padding-bottom: 10px; */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    /* border: 0.1px solid var(--colorCyan); */
+    border: 0.1px solid var(--colorCyan);
+    border-top: 0.1px solid #1d1d1d;
     color: var(--colorPurple);
     text-shadow: 0 0 5px #e32fff;
-    padding: 5px;
     text-align: center;
 }
 dialog .linkProject:hover{
     box-shadow: 0 0 5px 1px #2fd2ff, inset 0 0 5px 1px #2fd2ff;
+    border-top: 0px;
+    
 }
 dialog .linkProject:focus-visible{
     outline: 0px;
@@ -1072,7 +1129,12 @@ dialog .containerTechnologies .containerTech .nameTech{
 }
 
 
-
+@media (max-width: 930px){
+    .section-jobs{
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media (max-width: 768px) {
     body{
         width: 100vw;
@@ -1112,15 +1174,18 @@ dialog .containerTechnologies .containerTech .nameTech{
         text-shadow: 0px 0px 8px #b028c7;
     }
     .header{
-        width: 100vw;
+        width: 97vw;
         margin: 0px;
+        margin-right: 2vw;
     }
     .header nav a{
         display: none;  
     }
     main{
-        width: 100vw;
+        width: 97vw;
         margin: 0px;
+        left: -6px;
+        position: relative;
     }
     h1{
         text-align: center;
@@ -1152,7 +1217,7 @@ dialog .containerTechnologies .containerTech .nameTech{
     .section .divh2{
         margin: 0px;
         margin-bottom: 30px;
-        width: 100vw;
+        width: 96vw;
         flex-direction: row;
         max-width: none;
         min-width: none;
@@ -1180,11 +1245,11 @@ dialog .containerTechnologies .containerTech .nameTech{
         margin-top: 30px;
         grid-gap: 50px;
     }
-    dialog div{
+    dialog .divDialog{
         position: relative;
         top: 10vh;
-        left: 1vw;
-        width: 98vw;
+        left: calc(50% - 42.5vw);
+        width: 85vw;
         height: 80vh;
         background: var(--950);
         padding: 10px;

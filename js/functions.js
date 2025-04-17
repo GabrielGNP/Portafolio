@@ -43,8 +43,14 @@ function closeMenu(){
     document.getElementsByClassName("menuMobil")[0].style.display = "none";
 }
 
+
+let scrollPosition = 0;
 function openDialog(id){
-    
+    scrollPosition = window.scrollY;
+    document.querySelector('body').classList.add('no-scroll');
+    document.documentElement.style.scrollBehavior = 'auto';
+    document.body.style.top = `-${scrollPosition}px`;
+
     switch(id)
     {
         case "dialogSIC":
@@ -71,6 +77,13 @@ function openDialog(id){
 }
 
 function closeDialog(id){
+    document.querySelector('body').classList.remove('no-scroll');
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+    requestAnimationFrame(() => {
+        document.documentElement.style.scrollBehavior = 'smooth';
+      });
+    
     switch(id)
     {
         case "dialogSIC":
