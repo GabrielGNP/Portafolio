@@ -71,6 +71,9 @@ function openDialog(id){
         case "dialogGestorDeProductos":
             window.dialogGestorDeProductos.showModal();
             break;  
+        case "dialogCursos":
+            window.dialogCursos.showModal();
+            break;  
             
     }
 
@@ -104,6 +107,9 @@ function closeDialog(id){
         case "dialogGestorDeProductos":
             window.dialogGestorDeProductos.close();
             break;
+        case "dialogCursos":
+            window.dialogCursos.close();
+            break;  
             
     }
     //dialogSIC.close();
@@ -189,43 +195,31 @@ function showTools(){
 
 function openDataViews(viewID){
     switch (viewID) {
-        case "cursosView":
-            document.getElementById('cursosView').classList.add('open')
-            document.getElementById('proyectCSharpView').classList.remove('open')
-            document.getElementById('proyectFlutterView').classList.remove('open')
-            document.getElementById('proyectWebView').classList.remove('open')
-            document.getElementById('proyectNodeView').classList.remove('open')
-            break;
         case "proyectCSharpView":
-            document.getElementById('cursosView').classList.remove('open')
             document.getElementById('proyectCSharpView').classList.add('open')
             document.getElementById('proyectFlutterView').classList.remove('open')
             document.getElementById('proyectWebView').classList.remove('open')
             document.getElementById('proyectNodeView').classList.remove('open')
             break;
         case "proyectFlutterView":
-            document.getElementById('cursosView').classList.remove('open')
             document.getElementById('proyectCSharpView').classList.remove('open')
             document.getElementById('proyectFlutterView').classList.add('open')
             document.getElementById('proyectWebView').classList.remove('open')
             document.getElementById('proyectNodeView').classList.remove('open')
             break;
         case "proyectWebView":
-            document.getElementById('cursosView').classList.remove('open')
             document.getElementById('proyectCSharpView').classList.remove('open')
             document.getElementById('proyectFlutterView').classList.remove('open')
             document.getElementById('proyectWebView').classList.add('open')
             document.getElementById('proyectNodeView').classList.remove('open')
             break;
         case "proyectNodeView":
-            document.getElementById('cursosView').classList.remove('open')
             document.getElementById('proyectCSharpView').classList.remove('open')
             document.getElementById('proyectFlutterView').classList.remove('open')
             document.getElementById('proyectWebView').classList.remove('open')
             document.getElementById('proyectNodeView').classList.add('open')
             break;
         default:
-            document.getElementById('cursosView').classList.remove('open')
             document.getElementById('proyectCSharpView').classList.remove('open')
             document.getElementById('proyectFlutterView').classList.remove('open')
             document.getElementById('proyectWebView').classList.remove('open')
@@ -234,10 +228,125 @@ function openDataViews(viewID){
     }
 }
 function closeDataViews(){
-    document.getElementById('cursosView').classList.remove('open')
     document.getElementById('proyectCSharpView').classList.remove('open')
     document.getElementById('proyectFlutterView').classList.remove('open')
     document.getElementById('proyectWebView').classList.remove('open')
     document.getElementById('proyectNodeView').classList.remove('open')
     
 }
+
+document.addEventListener('change', function(event){
+    if(event.target.matches('input[type="radio"][name="cursos"]')){
+        var dirCertificate = ""
+        var urlCertificate = ""
+        switch (event.target.value) {
+            case "IoT_Cisco":
+                dirCertificate = "Certificate_Introduction_to_IoT.avif"
+                urlCertificate = "https://www.credly.com/badges/22a56eeb-57ef-47fa-bcb7-621a1f859cc0/public_url"
+                break;
+            case "Cybersecurity_Cisco":
+                dirCertificate = "Certificate_Introduction_to_Cybersecurity.avif"
+                urlCertificate = "https://www.credly.com/badges/58493a1c-38b2-4dd7-8d72-a7f2fe99c7c5/public_url"
+                break;
+            case "IA_IBM":
+                dirCertificate = "Certifiicate_Artificial_Intelligence_Fundamentals.avif"
+                urlCertificate = "https://www.credly.com/badges/fb632ff5-b64b-4ecc-8c15-97a22b3910cd/public_url"
+                break;
+            case "Curso_Java":
+                dirCertificate = "diploma-java-basico.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1631-java-basico/diploma/detalle/"
+                break;
+            case "Curso_Java_POO":
+                dirCertificate = "diploma-java-oop.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1629-java-oop/diploma/detalle/"
+                break;
+            case "Curso_Java_Persistencia_Datos":
+                dirCertificate = "diploma-java-persistencia.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1760-java-persistencia/diploma/detalle/"
+                break;
+            case "Curso_Java_Testing":
+                dirCertificate = "diploma-testing-java.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1503-testing-java/diploma/detalle/"
+                break;
+            case "Curso_Java_Spring":
+                dirCertificate = "diploma-java-spring.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1996-java-spring/diploma/detalle/"
+                break;
+            case "Curso_Java_Funcional":
+                dirCertificate = "diploma-java-funcional.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1826-java-funcional/diploma/detalle/"
+                break;
+            case "Curso_C++_Practico":
+                dirCertificate = "diploma-c-plus-plus-practico.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1545-c-plus-plus-practico/diploma/detalle/"
+                break;
+            case "Curso_C++_POO":
+                dirCertificate = "diploma-c-plus-plus-poo.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/2373-c-plus-plus-poo/diploma/detalle/"
+                break;
+            case "Curso_C++":
+                dirCertificate = "diploma-c-plus-plus.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/2372-c-plus-plus/diploma/detalle/"
+                break;
+            case "Curso_POO":
+                dirCertificate = "diploma-oop.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1474-oop/diploma/detalle/"
+                break;
+            case "Curso_Git_GitHub":
+                dirCertificate = "diploma-git-github.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1557-git-github/diploma/detalle/"
+                break;
+            case "Curso_Dart":
+                dirCertificate = "diploma-dart.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/2651-dart-old/diploma/detalle/"
+                break;
+            case "Curso_Flutter":
+                dirCertificate = "diploma-flutter.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1386-flutter-old/diploma/detalle/"
+                break;
+            case "Curso_Docker":
+                dirCertificate = "diploma-docker.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/2066-docker/diploma/detalle/"
+                break;
+            case "Curso_Historias_Usuario_Scrum":
+                dirCertificate = "diploma-historias-usuario-scrum.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/2616-historias-usuario-scrum/diploma/detalle/"
+                break;
+            case "Curso_Scrum":
+                dirCertificate = "diploma-scrum.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1750-scrum/diploma/detalle/"
+                break;
+            case "Curso_Desarrollo_Backend":
+                dirCertificate = "diploma-introduccion-backend.avif"
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/2508-backend-introduccion/diploma/detalle/"
+                break;
+            case "Curso_DevOps_platzi":
+                dirCertificate = "diploma-devops.avif";
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/1431-devops/diploma/detalle/"
+                break;
+            case "Curso_NewRelic_platzi":
+                dirCertificate = "diploma-new-relic.avif";
+                urlCertificate = "https://platzi.com/p/Gacoro/curso/3215-new-relic/diploma/detalle/"
+                break;
+            case "Curso_Ciberseguridad_Microsoft":
+                dirCertificate = "certificado_Descripción-de-los-conceptos-básicos-de-la-ciberseguridad.avif";
+                urlCertificate = "https://learn.microsoft.com/es-es/training/achievements/learn.wwl.describe-basic-concepts-of-cybersecurity.trophy?username=gabrielnicolsperero-4214"
+                break;
+            default:
+                dirCertificate = ""
+                urlCertificate = ""
+                break;
+        }
+        var innerHTML = ""
+        if(dirCertificate == "")
+            innerHTML = "<p>Seleccione un curso para ver el certificado</p>"
+        else
+            innerHTML = `<img class="image-certificate" src="certifications/${dirCertificate}" alt="">`
+
+        if(urlCertificate != "")
+            innerHTML = innerHTML + `<a class="linkProject" href="${urlCertificate}" target="_blank" rel="noopener noreferrer">ver certificado</a>`
+        
+            
+        document.getElementById('certificationsContainer').innerHTML = innerHTML;
+    }
+})
