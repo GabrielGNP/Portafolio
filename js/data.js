@@ -19,6 +19,12 @@ const PROFILE = {
 
 const EXPERIENCE = [
   {
+    id: "sofka", role: "Consultor de desarrollo", org: "Sofka Technologies",
+    start: "2026-05", end: null, logo: "img/Sofka.jpg",
+    summary: "",
+    points: [], techs: [],
+  },
+  {
     id: "uader", role: "Docente universitario", org: "UADER FCyT",
     orgFull: "Universidad Autónoma de Entre Ríos, Facultad de Ciencia y Tecnología",
     start: "2024-10", end: null, logo: "img/Uader.png",
