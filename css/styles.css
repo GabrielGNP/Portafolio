@@ -191,6 +191,7 @@ html, body { background: #0b0a1a; }
 .glass-study p { margin: 0; color: var(--g-dim); font-size: 14px; }
 .glass-study__years { font-family: var(--font-glass-display); font-size: 1.1rem; color: var(--g-text) !important; }
 .glass-study .glass-button { justify-self: start; margin-top: 6px; }
+.glass-study .glass-study__note { justify-self: start; padding: 3px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; background: rgba(227, 47, 255, .14); color: var(--magenta-soft); }
 .glass-skills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
 .glass-skills li { padding: 10px 16px; border-radius: 16px; font-size: 14px; color: var(--g-dim); }
 .glass-skills strong { color: var(--g-text); margin-right: 6px; }

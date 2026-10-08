@@ -156,7 +156,7 @@ const PROJECTS = [
 
 const STUDIES = [
   { title: "Analista de Sistemas de Información", place: "UADER FCyT", years: "2017 – 2022", inProgress: false },
-  { title: "Licenciatura en Sistemas de Información", place: "UADER FCyT", years: "2024 – en curso", inProgress: true },
+  { title: "Licenciatura en Sistemas de Información", place: "UADER FCyT", years: "2024 – 2025", inProgress: false, note: "Tesina pendiente" },
 ];
 
 const KNOWLEDGE = [
@@ -269,7 +269,7 @@ function aboutParagraphs(highlightTag, highlightClass) {
   const open = `<${highlightTag}${highlightClass ? ` class="${highlightClass}"` : ""}>`;
   const close = `</${highlightTag}>`;
   return [
-    `Tengo ${open}${fact("age")} años${close} y soy Analista en Sistemas de Información desde hace ${open}${fact("sinceGraduationText")}${close}. Me dedico al desarrollo de software, y lo que más me gusta es programar: es habitual que esté escribiendo código. Hoy continúo mis estudios con la Licenciatura en Sistemas de Información.`,
+    `Tengo ${open}${fact("age")} años${close} y soy Analista en Sistemas de Información desde hace ${open}${fact("sinceGraduationText")}${close}. Me dedico al desarrollo de software, y lo que más me gusta es programar: es habitual que esté escribiendo código. En 2025 terminé la Licenciatura en Sistemas de Información; me queda pendiente la tesina.`,
     `Desde que me recibí aprendí distintas tecnologías, algunas por curiosidad y otras porque un trabajo lo pedía: desarrollo móvil, aplicaciones web (front-end y back-end), APIs, aplicaciones de escritorio y un poco de desarrollo de juegos.`,
   ];
 }
