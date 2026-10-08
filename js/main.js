@@ -131,6 +131,10 @@ const ProfileFacts = {
       const value = String(values[el.dataset.fact]);
       el.textContent = el.dataset.pad ? value.padStart(Number(el.dataset.pad), "0") : value;
     });
+    document.querySelectorAll("[data-job-duration]").forEach((el) => {
+      const job = EXPERIENCE.find((j) => j.id === el.dataset.jobDuration);
+      el.textContent = DateUtils.durationText(DateUtils.jobMonths(job, today));
+    });
   },
 };
 

@@ -235,6 +235,28 @@ const DateUtils = {
     return `${this.MONTHS[date.getMonth()]} ${date.getFullYear()}`;
   },
 
+  /* Meses de un período contando el mes de inicio y el de fin (como LinkedIn) */
+  monthsInclusive(start, end) {
+    const a = this.parseMonth(start), b = this.parseMonth(end);
+    return (b.getFullYear() - a.getFullYear()) * 12 + (b.getMonth() - a.getMonth()) + 1;
+  },
+
+  /* Tiempo total de un trabajo: suma de sus períodos; los actuales cuentan hasta el mes en curso */
+  jobMonths(job, today) {
+    const current = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}`;
+    const periods = job.periods || [{ start: job.start, end: job.end }];
+    return periods.reduce((total, p) => total + this.monthsInclusive(p.start, p.end || current), 0);
+  },
+
+  /* «X años Y meses», sin la parte que dé cero */
+  durationText(months) {
+    const years = Math.floor(months / 12), rest = months % 12;
+    const parts = [];
+    if (years) parts.push(years === 1 ? "1 año" : `${years} años`);
+    if (rest) parts.push(rest === 1 ? "1 mes" : `${rest} meses`);
+    return parts.join(" ") || "menos de 1 mes";
+  },
+
   period(job) {
     return `${this.formatMonth(job.start)} – ${job.end ? this.formatMonth(job.end) : "actualidad"}`;
   },
