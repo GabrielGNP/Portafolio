@@ -1,0 +1,23 @@
+# Este repositorio es también un vault de Mycelium y se trabaja con Claude Code.
+# Nada de eso se versiona: GitHub Pages publicaría cualquier archivo que se suba.
+
+# ---------- Claude ----------
+.claude/
+CLAUDE.md
+.mcp.json
+
+# ---------- Mycelium ----------
+.mycelium/
+.mycignore
+# Plantillas de notas (Esporas)
+Esporas/
+# Lienzos, tablas, diagramas y dibujos del vault
+*.canvas
+*.base
+*.excalidraw
+*.drawio
+
+# ---------- Notas del vault ----------
+# Todas las notas Markdown quedan fuera; el README del repositorio sí se versiona.
+*.md
+!README.md
