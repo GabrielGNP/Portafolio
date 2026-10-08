@@ -37,7 +37,9 @@ const EXPERIENCE = [
   },
   {
     id: "coding-school", role: "Profesor de programación", org: "Academia Coding School",
-    start: "2023-11", end: "2025-04", logo: "img/Coding%20School.webp",
+    // Dos períodos en la academia; start y end abarcan del primero al último
+    periods: [{ start: "2023-11", end: "2025-04" }, { start: "2026-04", end: "2026-09" }],
+    start: "2023-11", end: "2026-09", logo: "img/Coding%20School.webp",
     summary: "Profesor de niveles iniciales. Enseñanza de los conceptos básicos y la lógica de la programación usando la creación de juegos como medio de aprendizaje.",
     points: [], techs: ["Scratch", "Construct 3"],
   },

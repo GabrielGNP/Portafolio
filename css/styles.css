@@ -162,6 +162,7 @@ html, body { background: #0b0a1a; }
 .glass-job__title { margin: 0; font-size: 1.05rem; font-weight: 600; }
 .glass-job__org { margin: 0; font-size: 13.5px; color: var(--g-dim); }
 .glass-job__period { justify-self: start; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; background: var(--g-glass-strong); font-variant-numeric: tabular-nums; }
+.glass-job__periods { display: flex; flex-wrap: wrap; gap: 6px; }
 .glass-job--active .glass-job__period { background: rgba(47, 210, 255, .16); color: var(--cyan-soft); }
 .glass-job p, .glass-job ul { margin: 0; color: var(--g-dim); font-size: 14.5px; }
 .glass-job ul:not(.tech-list) { padding-left: 1.1em; display: grid; gap: 3px; }
